@@ -1,0 +1,434 @@
+/*IMPORT FONTS*/
+@font-face {
+    font-family: "WebSymbols";
+    src: url(fonts/websymbols-regular-webfont.eot);
+    src: url(fonts/websymbols-regular-webfont.eot?#iefix) format("embedded-opentype"),
+        url(fonts/websymbols-regular-webfont.woff) format("woff"),
+        url(fonts/websymbols-regular-webfont.ttf) format("truetype"),
+        url(fonts/websymbols-regular-webfont.svg) format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Reset default browser styles*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*ESTILOS GENERALES*/
+
+body {
+    font-family: sans-serif;
+    font-weight: normal;
+    background-image: url(images/background-pattern.jpg);
+    background-attachment: fixed;
+}
+
+/*Titulo cabecera*/
+#cabecera {
+    width: 100%;
+    margin: 20%;
+
+    margin: 0px auto;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #ccc;
+    transition: all 300ms;
+
+}
+
+#cabecera #titulo-web {
+    font-family: Impact;
+    
+    transform: scaleY(2);
+    letter-spacing: 10px;
+    color: rgb(0, 160, 147);
+    text-shadow: 1px 1px 0px #333,
+        2px 2px 0px #333,
+        3px 3px 0px #333,
+        1px 2px 0px #333,
+        2px 3px 0px #333,
+        3px 4px 0px #333;
+    transition: all 1s;
+}
+
+#cabecera:hover {
+    background-color: #333;
+}
+
+#cabecera #titulo-web:hover {
+    animation: neonText 8s infinite linear, neonShadow 8s infinite linear;
+}
+
+@keyframes neonText {
+    0% {
+        color: cyan;
+    }
+
+    40% {
+        color: magenta;
+    }
+
+    70% {
+        color: yellow;
+    }
+
+    100% {
+        color: cyan;
+    }
+}
+
+@keyframes neonShadow {
+    0% {
+        text-shadow: 1px 1px 0px #333,
+            2px 2px 0px #333,
+            3px 3px 0px #333,
+            1px 2px 0px #333,
+            2px 3px 0px #333,
+            3px 4px 0px #333;
+    }
+
+    25% {
+        text-shadow: 1px 1px 0px blue,
+            2px 2px 0px blue,
+            3px 3px 0px blue,
+            1px 2px 0px blue,
+            2px 3px 0px blue,
+            3px 4px 0px blue;
+    }
+
+    50% {
+        text-shadow: 1px 1px 0px red,
+            2px 2px 0px red,
+            3px 3px 0px red,
+            1px 2px 0px red,
+            2px 3px 0px red,
+            3px 4px 0px red;
+    }
+
+    75% {
+        text-shadow: 1px 1px 0px green,
+            2px 2px 0px green,
+            3px 3px 0px green,
+            1px 2px 0px green,
+            2px 3px 0px green,
+            3px 4px 0px green;
+    }
+
+    100% {
+        text-shadow: 1px 1px 0px #333,
+            2px 2px 0px #333,
+            3px 3px 0px #333,
+            1px 2px 0px #333,
+            2px 3px 0px #333,
+            3px 4px 0px #333;
+    }
+}
+
+/*Menu Navegador*/
+#menu {
+    width: 100%;
+    min-height: 50px;
+    
+    background-color: #555;
+}
+
+/* #menu ul {
+    
+} */
+
+/* #menu ul li {
+    
+} */
+
+#menu ul li a {
+    
+    padding-right: 20px;
+    padding-left: 20px;
+    text-decoration: none;
+    color: white;
+    transition: all 500ms;
+
+
+}
+
+#menu ul li:hover a {
+    font-family: Impact;
+    letter-spacing: 1px;
+    background-color: rgb(180, 180, 180);
+    color: rgb(0, 160, 147);
+    box-shadow: 0px 0px 2px white;
+    text-shadow: 1px 1px 0px #333,
+        2px 2px 0px #333,
+        3px 3px 0px #333,
+        1px 2px 0px #333,
+        2px 3px 0px #333,
+        3px 4px 0px #333;
+    animation: neonText 8s infinite linear, neonShadow 8s infinite linear;
+
+}
+
+/*Barra Lateral*/
+#sidebar {
+    
+    min-height: 400px;
+    width: 15%;
+    margin: 20px 5px 10px 50px;
+    padding: 20px;
+    background-color: #ccc;
+    text-align: center;
+}
+
+#sidebar .sidebox {
+    margin-top: 5px;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #888;
+}
+
+#sidebar .sidebox h3 {
+    font-size: 20px;
+    font-family: Impact;
+    letter-spacing: 2px;
+    color: rgb(0, 160, 147);
+    text-shadow: 1px 1px 0px #333,
+        2px 2px 0px #333,
+        3px 3px 0px #333,
+        1px 2px 0px #333,
+        2px 3px 0px #333,
+        3px 4px 0px #333;
+    transition: 300ms all;
+}
+
+#sidebar .sidebox:hover h3 {
+    animation: neonText 8s infinite linear, neonShadow 8s infinite linear;
+}
+
+#sidebar label{
+    font-size: 16px;
+    font-family: "WebSymbols";
+    border-radius: 10px;
+    padding: 3px;
+    background-color: #ccc;
+    color: #555;
+    border: solid 1px rgb(163, 163, 163);
+    transition: 300ms all;
+}
+
+#sidebar label #candado {
+    font-size: 21px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 1px;
+    transition: 300ms all;
+}
+
+
+#sidebar label:hover {
+    background-color: #333;
+    color: #ccc;
+    cursor: pointer;
+}
+
+#sidebar #search {
+    padding: 5px;
+}
+
+#sidebar input[type="text"],
+#sidebar input[type="password"] {
+    margin-top: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 15%;
+    padding-left: 10%;
+    border-radius: 5px;
+    border: 1px solid #999;
+}
+
+#sidebar input[type="text"]:focus,
+#sidebar input[type="password"]:focus {
+    animation: neonSingleShadow 8s infinite linear;
+}
+
+@keyframes neonSingleShadow {
+    0% {
+        box-shadow: 0px 0px 10px red;
+    }
+
+    20% {
+        box-shadow: 0px 0px 10px yellow;
+    }
+
+    40% {
+        box-shadow: 0px 0px 10px blue;
+    }
+
+    60% {
+        box-shadow: 0px 0px 10px green;
+    }
+
+    80% {
+        box-shadow: 0px 0px 10px purple;
+    }
+
+    100% {
+        box-shadow: 0px 0px 10px red;
+    }
+}
+
+#sidebar input[type="submit"] {
+    padding: 5px;
+    background-color: rgb(0, 108, 99);
+    border-radius: 4px;
+    border: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+}
+
+#sidebar input[type="submit"]:hover {
+    background-color: rgb(0, 160, 147);
+}
+
+#sidebar input[type="submit"]:active {
+    box-shadow: 0px 0px 3px rgb(11, 59, 55) inset;
+}
+
+#sidebar .sidebox ul li {
+    list-style: none;
+    margin-top: 10px;
+    transition: all 300ms;
+
+}
+
+
+#sidebar .sidebox ul li a {
+    
+    text-decoration: none;
+    color: rgb(0, 108, 99);
+    text-shadow: 0px 0px 0px rgb(85, 10, 106);
+    transition: all 300ms;
+
+}
+
+#sidebar .sidebox ul li:hover a {
+    transform: scale(1.2, 1.2);
+}
+
+/*Contenido principal*/
+#container {
+    
+    width: 73%;
+    margin: 20px 50px 10px 0px;
+    background-color: rgb(78, 178, 180);
+}
+
+#container #articles {
+    margin: 20px;
+
+}
+
+#container #articles .articulo {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #eee;
+    border-radius: 10px 0px 10px 10px;
+}
+
+#container #articles .articulo h2 {
+    margin-bottom: 5px;
+    color: rgb(0, 108, 99);
+}
+
+#container #articles .articulo h2:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+#container #articles .articulo span {
+    padding: 5px;
+    background-color: #333;
+    color: #ccc;
+    border-radius: 0px 0px 0px 10px;
+    
+    margin-top: -43px;
+    margin-right: -10px;
+}
+
+#container #articles .articulo p {
+    color: rgb(49, 49, 49);
+}
+
+#container #articles .articulo p a {
+    text-decoration: none;
+    color: rgb(25, 144, 146);
+}
+
+#container #articles .articulo p a:hover {
+    text-decoration: underline;
+}
+
+#blog {
+    
+    text-align: center;
+    padding: 20px;
+}
+
+#blog #blogBox {
+    border-radius: 4px;
+    margin: 0px auto;
+    background-color: black;
+    padding: 10px;
+    border: 5px solid #777;
+    transition: all 300ms;
+}
+
+#blog #blogBox a {
+    
+    text-decoration: none;
+    color: rgb(0, 108, 99);
+    text-transform: uppercase;
+    font-size: 40px;
+    transition: all 300ms;
+}
+
+#blog #blogBox:hover a {
+    transform: scale(1.12, 1.12);
+    color: rgb(0, 187, 0);
+    text-shadow: 0px 0px 2px black,
+        1px 1px 2px black,
+        -1px -1px 2px black;
+}
+
+#blog #blogBox:hover {
+    background-image: url(images/coding.gif);
+}
+
+/*Pie Pagina*/
+
+#pie-pagina {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #000;
+}
+
+#pie-pagina p {
+    font-size: 20px;
+    color: white;
+    word-spacing: 2px;
+}
+
+#pie-pagina p a {
+    text-decoration: none;
+    color: rgb(0, 187, 0);
+}
+
+#pie-pagina p:hover a {
+    text-decoration: underline;
+    cursor: pointer;
+}

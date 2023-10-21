@@ -1,0 +1,277 @@
+@media (max-width: 1514px) {
+
+    #sidebar #search {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    #sidebar input[type="text"],
+    #sidebar input[type="password"] {
+        padding-right: 10%;
+    }
+}
+
+@media (max-width: 1421px) {
+
+    #sidebar input[type="text"],
+    #sidebar input[type="password"] {
+        padding-left: 0px;
+    }
+
+    #sidebar input[type="submit"] {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 1263px) {
+    #container {
+        margin-right: 30px;
+    }
+
+    #sidebar {
+        margin-left: 30px;
+    }
+
+    #sidebar input[type="text"],
+    #sidebar input[type="password"] {
+        padding-right: 0px;
+    }
+}
+
+@media (max-width: 1137px) {
+    #container {
+        margin-right: 20px;
+        width: 72%;
+    }
+
+    #sidebar {
+        margin-left: 20px;
+        width: 17%;
+    }
+
+    #sidebar .sidebox h3 {
+        font-size: 17.5px;
+    }
+
+    #sidebar .sidebox ul li a {
+        font-size: 14.5px;
+    }
+
+    #sidebar input[type="text"],
+    #sidebar input[type="password"] {
+        padding-right: 0px;
+    }
+}
+
+@media (max-width: 1003px) {
+    #container {
+        float: none;
+        width: 100%;
+        margin: 0px 0px 0px 0px;
+        padding-top: 5px;
+    }
+
+    #sidebar {
+        float: none;
+        width: 100%;
+        margin: 0px 0px 0px 0px;
+        min-height: 0px;
+        height: 100px;
+    }
+
+    #sidebar .sidebox {
+        float: left;
+        border-bottom: none;
+        border-right: 1px solid #888;
+        margin: 0px auto;
+        padding-bottom: 0px;
+        width: 30%;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    #sidebar .sidebox:last-child {
+        border-right: none;
+    }
+
+    #sidebar #search {
+        padding: 4px;
+        width: 50%;
+    }
+
+    #sidebar input[type="submit"] {
+        display: inline-block;
+        font-size: 10px;
+    }
+
+    #sidebar .sidebox #userName {
+        margin-bottom: 0px;
+    }
+
+    #sidebar .sidebox h3,
+    #sidebar .sidebox #logger {
+        margin-bottom: 5px;
+    }
+
+    #sidebar input[type="text"],
+    #sidebar input[type="password"] {
+        display: inline-block;
+        padding-top: 0px;
+        width: 70%;
+
+    }
+
+    #sidebar .sidebox form {
+        margin: 0px auto;
+    }
+
+    #sidebar .sidebox form,
+    #sidebar .sidebox h3 {
+        margin-left: -25px;
+    }
+
+    #sidebar .sidebox #websRecomendadas {
+        margin-left: 0px;
+    }
+
+    #sidebar .sidebox ul li {
+        font-size: 10px;
+    }
+
+    #sidebar label {
+        font-size: 13px;
+    }
+
+    #sidebar label #candado {
+        font-size: 16px;
+    }
+
+    #sidebar .sidebox ul li {
+        margin-top: 2px;
+    }
+
+    #sidebar .sidebox ul li a {
+        font-size: 12px;
+        display: inline-block;
+        margin-bottom: 0px;
+    }
+
+    #pie-pagina p {
+        font-size: 18px;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+}
+
+@media (max-width: 797px) {
+    #sidebar {
+        height: 120px;
+        padding-left: 10.5%;
+      }
+
+    #sidebar .sidebox {
+        width: 25%;
+    }
+}
+
+@media (max-width: 580px) {
+    #sidebar {
+        display: block;
+        float: none;
+        min-height: 480px;
+        width: 95%;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    #sidebar .sidebox {
+        width: 95%;
+        margin-top: 5px;
+        margin-bottom: 25px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid #888;
+        border-right: none;
+    }
+    
+    #sidebar .sidebox h3 {
+        font-size: 35px;
+    }
+    
+    #sidebar label{
+        font-size: 16px;
+        padding: 3px;
+    }
+    
+    #sidebar label #candado {
+        font-size: 21px;
+        padding-left: 2px;
+        padding-right: 2px;
+        padding-top: 1px;
+    }
+    
+    #sidebar #search {
+        padding: 5px;
+    }
+    
+    #sidebar input[type="text"],
+    #sidebar input[type="password"] {
+        margin-top: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    
+    #sidebar input[type="submit"] {
+        padding: 5px;
+        font-size: 14px;
+    }
+    
+    #sidebar .sidebox ul li {
+        margin-top: 10px;
+    }
+    
+    
+    #sidebar .sidebox ul li a {
+        display: block;
+        font-size: 18px; 
+    }
+
+    .articulo h2 {
+        font-size: 20px;
+    }
+
+    .articulo p {
+        font-size: 14px;
+    }
+
+    #container #articles .articulo span {
+        padding: 5px;
+        background-color: #333;
+        color: #ccc;
+        border-radius: 0px 0px 0px 0px;
+        display: block;
+        position: relative;
+        float: none;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        width: 100%;
+        margin-left: -10px;
+        padding-left: 15px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 458px) {
+    #menu ul li a {
+        font-size: 15px;
+        padding-left: 0px;
+    }
+}
+
+@media (max-width: 409px) {
+    #sidebar {
+        height: 522px;
+    }
+    h1 {
+        font-size: 26px;
+    }
+}

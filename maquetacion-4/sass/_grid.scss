@@ -1,0 +1,38 @@
+#header {
+    display: grid;
+    grid-template-columns: 68% 30%;
+    align-items: center;
+}
+
+#menu {
+    > ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+#content{
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    align-items: start;
+    justify-items: space-between;
+    column-gap: 7px; /*usar en vez de grid-column-gap*/
+}
+
+#projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 255px); /*auto-fill sirve para auto-rellenar, en este caso ponemos tantas columnas como falta haga para rellenar el espacio*/
+    gap: 20px;
+    align-items: start;
+
+}
+
+#footer{
+    display: grid;
+    grid-template-columns: 1fr 25%;
+    align-items: center;
+}
+

@@ -1,0 +1,58 @@
+@media (max-width: 1353px){
+    #header{
+        grid-template-columns: 65% 32%;
+    }
+}
+
+@media (max-width: 1170px){
+    #header{
+        grid-template-columns: 60% 25%;
+    }
+}
+
+@media(max-width: 784px){
+    #header{
+        grid-template-columns: 100%;
+        justify-content: center;
+        height: 140px;
+        padding-bottom: 20px;
+
+        h1{
+            text-align: center;
+        }
+    }
+
+    #content{
+        grid-template-columns: 1fr;
+        column-gap: auto;
+    }
+
+    #projects{
+        grid-template-columns: 1fr;
+        
+    }
+
+    .project{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    #sidebar{
+        margin-right: 0px;
+
+        ul{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+    }
+
+    #footer{
+        grid-template-columns: 1fr;
+        text-align: center;
+
+        .logo{
+            text-align: center !important;
+        }
+    }
+}

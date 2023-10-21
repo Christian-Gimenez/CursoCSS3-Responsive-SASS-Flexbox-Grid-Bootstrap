@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Máster en CSS con Víctor Robles WEB</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.png" />
+    <!--Indicamos donde esta el icono para poner el favicon-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+
+<body>
+
+    <!--Inicio de la cabecera-->
+    <header id="header">
+        <div id="logotipo">
+            <img src="img/logo.png" alt="Logotipo de la web" />
+        </div>
+
+        <h1>
+            <a href="index.html">
+                MASTER EN CSS
+            </a>
+        </h1>
+    </header>
+    <!--Fin de la cabecera-->
+
+    <!--Menú de navegación-->
+    <nav id="nav">
+        <ul>
+            <li>
+                <a href="index.html">Inicio</a>
+            </li>
+            <li>
+                <a href="#">Contenido</a>
+            </li>
+            <li>
+                <a href="#">Requerimentos</a>
+            </li>
+            <li>
+                <a href="#">Lenguajes</a>
+                <!--Submenu desplegable oculto hasta hacer hover-->
+                <ul>
+                    <li>
+                        <a href="#">HTML</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS</a>
+                    </li>
+                </ul>
+                <!--FIN Submenu desplegable oculto-->
+            </li>
+            <li>
+                <a href="#">Frameworks</a>
+                <!--Submenu desplegable oculto hasta hacer hover-->
+                <ul>
+                    <li>
+                        <a href="#">LESS</a>
+                    </li>
+                    <li>
+                        <a href="#">SASS</a>
+                    </li>
+                    <li>
+                        <a href="#">Bootstrap 4</a>
+                    </li>
+                </ul>
+                <!--FIN Submenu desplegable oculto-->
+            </li>
+            <li>
+                <a href="#">Proyectos</a>
+            </li>
+            <li>
+                <a href="#">El instructor</a>
+            </li>
+            <li>
+                <a href="#">Reseñas</a>
+            </li>
+            <li>
+                <a href="#">Blog</a>
+            </li>
+            <li>
+                <a href="#">Contacto</a>
+            </li>
+        </ul>
+    </nav>
+    <!--Fin del menú-->
+
+    <!--Inicio del contenido central-->
+    <main id="content">
+
+        <!--Inicio de la barra lateral-->
+        <aside id="aside">
+            <div class="widget">
+                <h3>Entrar en la web</h3>
+                <form>
+                    <label for="user">Usuario:</label>
+                    <input type="text" id="user" />
+
+                    <label for="passwd">Contraseña:</label>
+                    <input type="password" id="passwd" />
+
+                    <input type="submit" value="Entrar" />
+                </form>
+
+                <p>
+                    <a href="#">Zona de Alumnmos</a>
+                </p>
+                <p>
+                    <a href="#">Zona de Profesor</a>
+                </p>
+                <p>
+                    <a href="#">Acceso a calificaciones</a>
+                </p>
+            </div>
+
+            <div class="widget">
+                <h3 class="blue">Aula virtual 1</h3>
+                <form>
+                    <label for="usuario1">Nombre de usuario:</label>
+                    <input type="text" id="usuario1" />
+
+                    <label for="password1">Contraseña:</label>
+                    <input type="password" id="password1" />
+
+                    <input type="submit" value="Entrar" />
+                </form>
+            </div>
+
+            <div class="widget">
+                <h3 class="red">Aula virtual 2</h3>
+                <form>
+                    <label for="usuario2">Nombre de usuario:</label>
+                    <input type="text" id="usuario2" />
+
+                    <label for="password2">Contraseña:</label>
+                    <input type="password" id="password2" />
+
+                    <input type="submit" value="Entrar" />
+                </form>
+            </div>
+
+            <div class="widget">
+                <h3>Enlaces de interés</h3>
+                <ul>
+                    <li>
+                        <a href="https://victorroblesweb.es/academy/">
+                            Master en JavaScript
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://victorroblesweb.es/academy/">
+                            Master en PHP
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://victorroblesweb.es/academy/">
+                            Master en Frameworks JS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://victorroblesweb.es/academy/">
+                            Master en webs full-stack
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://victorroblesweb.es/academy/">
+                            victorroblesweb.es
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </aside>
+        <!--Fin de la barra lateral-->
+
+        <!--Inicio de las secciones-->
+        <div id="sections">
+            <section id="frontend">
+                <span id="stickers">
+                    <img class="stickerOne" src="img/scotch.png" alt="Pegatina" />
+                    <img class="stickerTwo" src="img/scotch.png" alt="Pegatina" />
+                </span>
+                <h2 class="titulo">Noticias de front-end</h2>
+                <article class="article">
+                    <span class="icon">a </span>
+                    <p><a href="#">Titulo de la entrada </a>Lorem ipsum dolor sit
+                        amet, consectetur adipiscing elit. Pellentesque dignissim dolor vitae finibus facilisis.
+                        Cras at ullamcorper augue, vitae volutpat sapien. Nullam sollicitudin molestie enim, at
+                        sodales erat gravida vitae. Vivamus eu vulputate felis. Duis quis risus finibus, dignissim
+                        nibh in, rutrum arcu. Vestibulum suscipit tincidunt est, sed mollis augue eleifend non.
+                        Quisque non est lacinia, interdum orci a, sodales velit.
+                    </p>
+                    <span class="date" title="Fecha y autor del artículo">[<time datetime="2022-05-04">04-05-2022</time>. Christian Giménez]</span>
+                </article>
+                <article class="article">
+                    <span class="icon">a </span>
+                    <p><a href="#">Titulo de la entrada </a>Lorem ipsum dolor sit
+                        amet, consectetur adipiscing elit. Pellentesque dignissim dolor vitae finibus facilisis.
+                        Cras at ullamcorper augue, vitae volutpat sapien. Nullam sollicitudin molestie enim, at
+                        sodales erat gravida vitae. Vivamus eu vulputate felis. Duis quis risus finibus, dignissim
+                        nibh in, rutrum arcu. Vestibulum suscipit tincidunt est, sed mollis augue eleifend non.
+                        Quisque non est lacinia, interdum orci a, sodales velit.
+                    </p>
+                    <span class="date" title="Fecha y autor del artículo">[<time datetime="2022-05-04">04-05-2022</time>. Christian Giménez]</span>
+                </article>
+                <article class="article">
+                    <span class="icon">a </span>
+                    <p><a href="#">Titulo de la entrada </a>Lorem ipsum dolor sit
+                        amet, consectetur adipiscing elit. Pellentesque dignissim dolor vitae finibus facilisis.
+                        Cras at ullamcorper augue, vitae volutpat sapien. Nullam sollicitudin molestie enim, at
+                        sodales erat gravida vitae. Vivamus eu vulputate felis. Duis quis risus finibus, dignissim
+                        nibh in, rutrum arcu. Vestibulum suscipit tincidunt est, sed mollis augue eleifend non.
+                        Quisque non est lacinia, interdum orci a, sodales velit.
+                    </p>
+                    <span class="date" title="Fecha y autor del artículo">[<time datetime="2022-05-04">04-05-2022</time>. Christian Giménez]</span>
+                </article>
+                <article class="article">
+                    <span class="icon">a </span>
+                    <p><a href="#">Titulo de la entrada </a>Lorem ipsum dolor sit
+                        amet, consectetur adipiscing elit. Pellentesque dignissim dolor vitae finibus facilisis.
+                        Cras at ullamcorper augue, vitae volutpat sapien. Nullam sollicitudin molestie enim, at
+                        sodales erat gravida vitae. Vivamus eu vulputate felis. Duis quis risus finibus, dignissim
+                        nibh in, rutrum arcu. Vestibulum suscipit tincidunt est, sed mollis augue eleifend non.
+                        Quisque non est lacinia, interdum orci a, sodales velit.
+                    </p>
+                    <span class="date" title="Fecha y autor del artículo">[<time datetime="2022-05-04">04-05-2022</time>. Christian Giménez]</span>
+                </article>
+                <article class="article">
+                    <span class="icon">a </span>
+                    <p><a href="#">Titulo de la entrada </a>Lorem ipsum dolor sit
+                        amet, consectetur adipiscing elit. Pellentesque dignissim dolor vitae finibus facilisis.
+                        Cras at ullamcorper augue, vitae volutpat sapien. Nullam sollicitudin molestie enim, at
+                        sodales erat gravida vitae. Vivamus eu vulputate felis. Duis quis risus finibus, dignissim
+                        nibh in, rutrum arcu. Vestibulum suscipit tincidunt est, sed mollis augue eleifend non.
+                        Quisque non est lacinia, interdum orci a, sodales velit.
+                    </p>
+                    <span class="date" title="Fecha y autor del artículo">[<time datetime="2022-05-04">04-05-2022</time>. Christian Giménez]</span>
+                </article>
+            </section>
+
+            <section id="backend">
+                <span id="stickers">
+                    <img class="stickerOne" src="img/scotch.png" alt="Pegatina" />
+                    <img class="stickerTwo" src="img/scotch.png" alt="Pegatina" />
+                </span>
+                <h2 class="titulo red">Noticias de back-end</h2>
+                <article class="article">
+                    <span class="icon">a </span>
+                    <p><a href="#">Titulo de la entrada </a>Lorem ipsum dolor sit
+                        amet, consectetur adipiscing elit. Pellentesque dignissim dolor vitae finibus facilisis.
+                        Cras at ullamcorper augue, vitae volutpat sapien. Nullam sollicitudin molestie enim, at
+                        sodales erat gravida vitae. Vivamus eu vulputate felis. Duis quis risus finibus, dignissim
+                        nibh in, rutrum arcu. Vestibulum suscipit tincidunt est, sed mollis augue eleifend non.
+                        Quisque non est lacinia, interdum orci a, sodales velit.
+                    </p>
+                    <span class="date" title="Fecha y autor del artículo">[<time datetime="2022-05-04">04-05-2022</time>. Christian Giménez]</span>
+                </article>
+                <article class="article">
+                    <span class="icon">a </span>
+                    <p><a href="#">Titulo de la entrada </a>Lorem ipsum dolor sit
+                        amet, consectetur adipiscing elit. Pellentesque dignissim dolor vitae finibus facilisis.
+                        Cras at ullamcorper augue, vitae volutpat sapien. Nullam sollicitudin molestie enim, at
+                        sodales erat gravida vitae. Vivamus eu vulputate felis. Duis quis risus finibus, dignissim
+                        nibh in, rutrum arcu. Vestibulum suscipit tincidunt est, sed mollis augue eleifend non.
+                        Quisque non est lacinia, interdum orci a, sodales velit.
+                    </p>
+                    <span class="date" title="Fecha y autor del artículo">[<time datetime="2022-05-04">04-05-2022</time>. Christian Giménez]</span>
+                </article>
+                <article class="article">
+                    <span class="icon">a </span>
+                    <p><a href="#">Titulo de la entrada </a>Lorem ipsum dolor sit
+                        amet, consectetur adipiscing elit. Pellentesque dignissim dolor vitae finibus facilisis.
+                        Cras at ullamcorper augue, vitae volutpat sapien. Nullam sollicitudin molestie enim, at
+                        sodales erat gravida vitae. Vivamus eu vulputate felis. Duis quis risus finibus, dignissim
+                        nibh in, rutrum arcu. Vestibulum suscipit tincidunt est, sed mollis augue eleifend non.
+                        Quisque non est lacinia, interdum orci a, sodales velit.
+                    </p>
+                    <span class="date" title="Fecha y autor del artículo">[<time datetime="2022-05-04">04-05-2022</time>. Christian Giménez]</span>
+                </article>
+                <article class="article">
+                    <span class="icon">a </span>
+                    <p><a href="#">Titulo de la entrada </a>Lorem ipsum dolor sit
+                        amet, consectetur adipiscing elit. Pellentesque dignissim dolor vitae finibus facilisis.
+                        Cras at ullamcorper augue, vitae volutpat sapien. Nullam sollicitudin molestie enim, at
+                        sodales erat gravida vitae. Vivamus eu vulputate felis. Duis quis risus finibus, dignissim
+                        nibh in, rutrum arcu. Vestibulum suscipit tincidunt est, sed mollis augue eleifend non.
+                        Quisque non est lacinia, interdum orci a, sodales velit.
+                    </p>
+                    <span class="date" title="Fecha y autor del artículo">[<time datetime="2022-05-04">04-05-2022</time>. Christian Giménez]</span>
+                </article>
+            </section>
+
+            <section id="instructor">
+                <span id="stickers">
+                    <img class="stickerOne" src="img/scotch.png" alt="Pegatina" />
+                    <img class="stickerTwo" src="img/scotch.png" alt="Pegatina" />
+                </span>
+                <h2 class="titulo orange">Noticias del instructor</h2>
+                <article class="article">
+                    <span class="icon">a </span>
+                    <p><a href="#">Titulo de la entrada </a>Lorem ipsum dolor sit
+                        amet, consectetur adipiscing elit. Pellentesque dignissim dolor vitae finibus facilisis.
+                        Cras at ullamcorper augue, vitae volutpat sapien. Nullam sollicitudin molestie enim, at
+                        sodales erat gravida vitae. Vivamus eu vulputate felis. Duis quis risus finibus, dignissim
+                        nibh in, rutrum arcu. Vestibulum suscipit tincidunt est, sed mollis augue eleifend non.
+                        Quisque non est lacinia, interdum orci a, sodales velit.
+                    </p>
+                    <span class="date" title="Fecha y autor del artículo">[<time datetime="2022-05-04">04-05-2022</time>. Christian Giménez]</span>
+                </article>
+                <article class="article">
+                    <span class="icon">a </span>
+                    <p><a href="#">Titulo de la entrada </a>Lorem ipsum dolor sit
+                        amet, consectetur adipiscing elit. Pellentesque dignissim dolor vitae finibus facilisis.
+                        Cras at ullamcorper augue, vitae volutpat sapien. Nullam sollicitudin molestie enim, at
+                        sodales erat gravida vitae. Vivamus eu vulputate felis. Duis quis risus finibus, dignissim
+                        nibh in, rutrum arcu. Vestibulum suscipit tincidunt est, sed mollis augue eleifend non.
+                        Quisque non est lacinia, interdum orci a, sodales velit.
+                    </p>
+                    <span class="date" title="Fecha y autor del artículo">[<time datetime="2022-05-04">04-05-2022</time>. Christian Giménez]</span>
+                </article>
+                <article class="article">
+                    <span class="icon">a </span>
+                    <p><a href="#">Titulo de la entrada </a>Lorem ipsum dolor sit
+                        amet, consectetur adipiscing elit. Pellentesque dignissim dolor vitae finibus facilisis.
+                        Cras at ullamcorper augue, vitae volutpat sapien. Nullam sollicitudin molestie enim, at
+                        sodales erat gravida vitae. Vivamus eu vulputate felis. Duis quis risus finibus, dignissim
+                        nibh in, rutrum arcu. Vestibulum suscipit tincidunt est, sed mollis augue eleifend non.
+                        Quisque non est lacinia, interdum orci a, sodales velit.
+                    </p>
+                    <span class="date" title="Fecha y autor del artículo">[<time datetime="2022-05-04">04-05-2022</time>. Christian Giménez]</span>
+                </article>
+                <article class="article">
+                    <span class="icon">a </span>
+                    <p><a href="#">Titulo de la entrada </a>Lorem ipsum dolor sit
+                        amet, consectetur adipiscing elit. Pellentesque dignissim dolor vitae finibus facilisis.
+                        Cras at ullamcorper augue, vitae volutpat sapien. Nullam sollicitudin molestie enim, at
+                        sodales erat gravida vitae. Vivamus eu vulputate felis. Duis quis risus finibus, dignissim
+                        nibh in, rutrum arcu. Vestibulum suscipit tincidunt est, sed mollis augue eleifend non.
+                        Quisque non est lacinia, interdum orci a, sodales velit.
+                    </p>
+                    <span class="date" title="Fecha y autor del artículo">[<time datetime="2022-05-04">04-05-2022</time>. Christian Giménez]</span>
+                </article>
+            </section>
+        </div>
+        <!--Fin de las secciones-->
+
+        <aside id="frase">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</p>
+            <a href="#">Leer más frases...</a>
+        </aside>
+
+        <!--limpiamos flotados-->
+        <div class="clearfix"></div>
+        <!--limpiamos flotados-->
+
+        <div id="history">
+            <a href="#">[Ver historico de noticias]</a>
+        </div>
+    </main>
+    <!--Fin del contenido central-->
+
+    <!--limpiamos flotados-->
+    <div class="clearfix"></div>
+    <!--limpiamos flotados-->
+    
+    <!--Inicio del footer-->
+    <footer id="footer">
+        <p>&copy; Desarrollado por Víctor Robles Web</p>
+        <p>Más contenido y formación en <a href="https://victorroblesweb.es/academy">victorroblesweb.es/academy</a></p>
+    </footer>
+    <!--Fin del footer-->
+
+</body>
+
+</html>

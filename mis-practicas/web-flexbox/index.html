@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=width-device, user scalable=no" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="responsive.css" />
+    <title>Web con FLEXBOX</title>
+</head>
+
+<body>
+    <!--Inicio Cabecera-->
+    <header id="cabecera">
+        <div id="titulo-web">
+            <h1>WEB CON FLEXBOX</h1>
+        </div>
+    </header>
+    <!--Fin Cabecera-->
+
+    <!--Inicio Menu-->
+    <nav id="menu">
+        <ul>
+            <li><a href="../web-floats/index.html">Floats</a></li>
+            <li><a href="../web-flexbox/index.html">Flexbox</a></li>
+            <li><a href="../web-grid/index.html">Grid</a></li>
+            <li><a href="#">Página 3</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+    <!--Fin Menu-->
+
+    <div id="main-wrap">
+        <!--Inicio Barra Lateral-->
+        <aside id="sidebar">
+            <div class="sidebox">
+                <h3>Buscador</h3>
+                <form>
+                    <input type="text" id="search" />
+                    <input type="submit" value="Buscar" />
+                </form>
+            </div>
+
+            <div class="sidebox logwrap">
+                <h3 id="logger">Login</h3>
+                <form>
+                    <label for="userName" name="Nombre usuario">U</label>
+                    <input type="text" id="userName" />
+
+                    <br />
+
+                    <label for="passwrd" name="Contraseña usuario"><span id="candado">x</span></label>
+                    <input type="password" id="passwrd" />
+                </form>
+            </div>
+
+            <div class="sidebox">
+                <h3 id="websRecomendadas">Webs recomendadas:</h3>
+                <ul>
+                    <li><a href="https://linktr.ee/Winterhorn">Winterhorn - All links</a></li>
+                    <li><a href="#">Mejores articulos del año</a></li>
+                    <li><a href="#">Canales de YouTube destacados</a></li>
+                    <li><a href="#">Catalogo HW</a></li>
+                </ul>
+            </div>
+
+        </aside>
+        <!--Fin Barra Lateral-->
+
+        <!--Inicio Contenedor Principal-->
+        <main id="container">
+            <section id="articles">
+                <article class="articulo">
+                    <h2>Articulo de ejemplo 1</h2>
+                    <span>Fecha del artículo - <time datetime="2022-05-22">22 Mayo 2022.</time></span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam est nulla, feugiat tincidunt
+                        rhoncus
+                        sit amet, egestas faucibus nibh. Aliquam mollis orci malesuada felis mattis consectetur. Morbi
+                        nec
+                        faucibus eros. Etiam vitae aliquam nulla, ac mollis nibh. Nullam dictum felis vitae felis
+                        accumsan
+                        imperdiet. Donec a mauris eu nulla ultrices vestibulum. Morbi imperdiet blandit tempor. Nam
+                        egestas
+                        turpis metus, ut tincidunt felis facilisis et. Suspendisse id massa sollicitudin, congue lectus
+                        nec,
+                        blandit ipsum. Sed sollicitudin laoreet lectus, at euismod neque vulputate ac. Ut nec augue vel
+                        elit
+                        feugiat pharetra id a nibh...<a href="#">Leer más.</a></p>
+                </article>
+                <article class="articulo">
+                    <h2>Articulo de ejemplo 2</h2>
+                    <span>Fecha del artículo - <time datetime="2022-05-22">22 Mayo 2022.</time></span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam est nulla, feugiat tincidunt
+                        rhoncus
+                        sit amet, egestas faucibus nibh. Aliquam mollis orci malesuada felis mattis consectetur. Morbi
+                        nec
+                        faucibus eros. Etiam vitae aliquam nulla, ac mollis nibh. Nullam dictum felis vitae felis
+                        accumsan
+                        imperdiet. Donec a mauris eu nulla ultrices vestibulum. Morbi imperdiet blandit tempor. Nam
+                        egestas
+                        turpis metus, ut tincidunt felis facilisis et. Suspendisse id massa sollicitudin, congue lectus
+                        nec,
+                        blandit ipsum. Sed sollicitudin laoreet lectus, at euismod neque vulputate ac. Ut nec augue vel
+                        elit
+                        feugiat pharetra id a nibh...<a href="#">Leer más.</a></p>
+                </article>
+                <article class="articulo">
+                    <h2>Articulo de ejemplo 3</h2>
+                    <span>Fecha del artículo - <time datetime="2022-05-22">22 Mayo 2022.</time></span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam est nulla, feugiat tincidunt
+                        rhoncus
+                        sit amet, egestas faucibus nibh. Aliquam mollis orci malesuada felis mattis consectetur. Morbi
+                        nec
+                        faucibus eros. Etiam vitae aliquam nulla, ac mollis nibh. Nullam dictum felis vitae felis
+                        accumsan
+                        imperdiet. Donec a mauris eu nulla ultrices vestibulum. Morbi imperdiet blandit tempor. Nam
+                        egestas
+                        turpis metus, ut tincidunt felis facilisis et. Suspendisse id massa sollicitudin, congue lectus
+                        nec,
+                        blandit ipsum. Sed sollicitudin laoreet lectus, at euismod neque vulputate ac. Ut nec augue vel
+                        elit
+                        feugiat pharetra id a nibh...<a href="#">Leer más.</a></p>
+                </article>
+                <article class="articulo">
+                    <h2>Articulo de ejemplo 4</h2>
+                    <span>Fecha del artículo - <time datetime="2022-05-22">22 Mayo 2022.</time></span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam est nulla, feugiat tincidunt
+                        rhoncus
+                        sit amet, egestas faucibus nibh. Aliquam mollis orci malesuada felis mattis consectetur. Morbi
+                        nec
+                        faucibus eros. Etiam vitae aliquam nulla, ac mollis nibh. Nullam dictum felis vitae felis
+                        accumsan
+                        imperdiet. Donec a mauris eu nulla ultrices vestibulum. Morbi imperdiet blandit tempor. Nam
+                        egestas
+                        turpis metus, ut tincidunt felis facilisis et. Suspendisse id massa sollicitudin, congue lectus
+                        nec,
+                        blandit ipsum. Sed sollicitudin laoreet lectus, at euismod neque vulputate ac. Ut nec augue vel
+                        elit
+                        feugiat pharetra id a nibh...<a href="#">Leer más.</a></p>
+                </article>
+            </section>
+
+            <section id="blog">
+                <div id="blogBox">
+                    <h4><a href=#">Ir al BLOG</a></h4>
+                </div>
+            </section>
+
+        </main>
+        <!--Fin Contenedor Principal-->
+    </div>
+
+    <!--Inicio Pie Página-->
+    <footer id="pie-pagina">
+        <p>Web demo de floats creada por <a href="https://github.com/Cryptic-WebDev"><strong>Cryptic-WebDev</strong></a>
+            - All right reserved 2022 &copy;.</p>
+    </footer>
+    <!--Fin Pie Página-->
+</body>
+
+</html>

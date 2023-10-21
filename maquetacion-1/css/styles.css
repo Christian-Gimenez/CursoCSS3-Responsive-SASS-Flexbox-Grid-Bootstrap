@@ -1,0 +1,432 @@
+/*FUENTES*/
+@font-face { /*Importamos asi la fuente*/
+    font-family: "nevis"; /*indicamos el nombre de la fuente*/
+    src: url("fonts/nevis.eot"); /*indicamos la URL de la fuente*/
+    /*indicamos otras url extra con ?#iefix por si no la carga bien internet explorer e indicamos su formato*/
+    src: url("fonts/nevis.eot?#iefix") format("embedded-opentype"),
+        url("fonts/nevis.woff") /*url fuente*/ format("woff"), /*formato fuente*/
+        url("fonts/nevis.ttf") /*url fuente*/ format("truetype"), /*formato fuente*/
+        url("fonts/nevis.svg") /*url fuente*/ format("svg"); /*formato fuente*/
+    font-weight: normal; /*indicamos que el grosor de esta fuente es normal*/
+    font-style: normal; /*indicamos que esta fuente tiene un estilo normal*/
+}
+
+@font-face { /*importamos la fuente*/
+    font-family: "Fjalla"; /*indicamos su nombre*/
+    src: url("fonts/FjallaOne-Regular.ttf") format("truetype"); /*ponemos su url e indicamos su formato*/
+    font-weight: normal; /*indicamos el grosor por defecto de la fuente*/
+    font-style: normal; /*indicamos el estilo de la fuente por defecto*/
+}
+
+@font-face { /*importamos la fuente de iconos*/
+    font-family: "icons"; /*indicamos su nombre*/
+    src: url("fonts/websymbols-regular-webfont.svg#WebSymbolsRegular") format("svg"), /*importamos por su url la principal y ponemos #WebSymbolsRegular para indicar la fuente*/
+        url("fonts/websymbols-regular-webfont.eot"); /*de segunda opcioón añadimos el formato .eot*/
+    src: url("fonts/websymbols-regular-webfont.eot?#iefix") format("embedded-opentype"), /*ponemos de nuevo el formato .eot con el fix de internet explorer*/
+        url("fonts/websymbols-regular-webfont.woff") format("woff"), /*indicamos de respaldo el formato woff*/
+        url("fonts/websymbols-regular-webfont.ttf") format("truetype"); /*indicamos de respaldo el formato ttf*/
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*ESTILOS GENERALES*/
+* { /*limpiamos margenes interiores y exteriores*/
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-image: url("../img/paven.png"); /*añadimos una imagen patron de fondo*/
+}
+
+a {
+    color: #529125;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #529125;
+}
+
+a:hover {
+    color: #285616;
+}
+
+.blue { /*cambiamos el color a Aula Virtual 1*/
+    color: #1876f2 !important; /*!important es mala practica, se deben poner pocos, pero en este caso esta justificado para poder ubicar esto en los estilos generales*/
+}
+
+.red { /*cambiamos el color a Aula Virtual 2*/
+    color: #9b2422 !important; /*!important es mala practica, se deben poner pocos, pero en este caso esta justificado para poder ubicar esto en los estilos generales*/
+}
+
+.orange { /*cambiamos el color al titulo de instructor*/
+    color: #d79d2a !important;
+}
+
+/*Mi forma de darle color a los titulos Back-end e Instructor*/
+/* #sections #backend .titulo { selecciono la clase titulo de los id backend de los id sections
+    color: #9b2422;
+}
+
+#sections #instructor .titulo { selecciono la clase titulo de los id backend de los id sections
+    color: #d79d2a;
+} */
+
+.icon {
+    font-family: icons; /*le ponemos la fuente de iconos importada de websymbols*/
+    float: left; /*para que flote a la izquierda y se ponga al lado del texto*/
+    margin-right: 5px; /*para espaciarlo con el margen exterior derecho y que no se pegue al texto*/
+    margin-top: -2px; /*para quitarle margen exterior superior y ajustarlo más al texto*/
+
+}
+
+/*Clearfix - limpiar flotados*/
+.clearfix {
+    float: none; /*para que no flote nada*/
+    clear: both; /*para limpiar los flotados contiguos*/
+}
+
+/*FORMULARIOS*/
+input[type="text"], /*utilizamos los selectores de atributo y separamos con comas , para añadirle a todos ellos el mismo estilo*/
+input[type="email"],
+input[type="password"],
+select {
+    border: 1px solid #c9c9c9; /*añadimos el borde a los formularios*/
+    box-shadow: 0px 0px 2px #ccc inset; /*añadimos sombra interna de 2px de difuminado*/
+    background: white;
+    padding: 1px; /*aumentamos margen interior*/
+    padding-top: 2px; /*aumentamos aún más el margen superior interior*/
+    padding-bottom: 2px; /*aumentamos aún más el margen inferior interior*/
+    color: gray;
+    transition: all 300ms; /*all para que afecte a todas las propiedades*/
+}
+
+input[type="text"]:focus,  /*pseudo-clase para cuando clicamos y hacemos foco en el input*/
+input[type="email"]:focus, 
+input[type="password"]:focus, 
+select:focus{ /*seleccionamos todos los tipos de formularios para cambiar el estilo del focus*/
+    border: 1px solid #70B231;
+    color: black;
+}
+
+input[type="button"], /*ahora le damos estilos a los botones*/
+input[type="submit"],
+input[type="reset"],
+button{
+    display: block; /*para poderlo usar como bloque*/
+    border-radius: 3px; /*darle un borde redondeado*/
+    border: 1px solid green;
+    width: 60px; /*anchura de 60px*/
+    padding: 3px; /*margen interno de 3px*/
+    background-color: #70B231; /*color de fondo*/
+    cursor: pointer; /*para que cuando pase el raton lo ponga en forma de dedo*/
+    color: white; /*color letra*/
+    background: linear-gradient(#70B231, #4d9a04); /*degradado interno*/
+}
+
+input[type="button"]:hover, /*cuando pasemos el raton por encima, saldra una sombra*/
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover{
+    box-shadow: 0px 0px 2px gray; /*sombra para cuando pase el raton encima*/
+}
+
+input[type="button"]:active, /*cuando pulse ya el boton*/
+input[type="submit"]:active,
+input[type="reset"]:active,
+button:active{
+    box-shadow: 0px 0px 3px gray inset; /*sombra interna cuando pulsas boton*/
+    text-shadow: 0px 0px 1px #ccc; /*para que el texto se ilumine al pulsar*/
+}
+
+
+/*CABECERA*/
+#header {
+    min-width:1024px; /*ponemos esta anchura minima, aunque luego hacemos que ocupa todo*/
+    width: 100%; /*hacemos que ocupe el 100%*/
+    height: 250px; /*tomando de referencia la original, le damos 250px de alto*/
+    margin: 0px auto; /*para que me centre el div en caso de que sea necesario*/
+}
+
+#header a { /*los enlaces de la cabecera*/
+    text-decoration: none; /*quitarle los estilos por defecto al enlace*/
+}
+
+#header #logotipo { /*la caja del logotipo dentro de header*/
+    width: 770px; /*para ponerle este tamaño a la caja del logotipo+h1*/
+    margin: 0px auto; /*centrar el logo*/
+    padding-top: 20px; /*margen interior superior*/
+}
+
+#header #logotipo img { /*la imagen del logotipo dentro de header*/
+    display: block; /*para que se comporte como un bloque*/
+    text-align: center;
+    margin: 0px auto; /*centramos la imagen del logo*/
+    width: 140px; /*ponemos este tamaño al logo igual que en el original*/
+}
+
+#header h1 { /*El H1 del header MÁSTER EN CSS*/
+    text-align: center; /*alineamos al centro el texto*/
+    font-size: 40px; /*tamaño del texto*/
+    color: #70B231; /*color del texto, pero al ser enlace hay que ponerlo también en el mismo*/
+    font-family: "nevis"; /*ponemos la fuente importada*/
+    text-transform: uppercase; /*transformamos el h1 en MAYUS*/
+    letter-spacing: 4px; /*damos un espaciado entre letras de 4px;*/
+    margin-top: 10px; /*añadimos más margen exterior arriba*/
+    text-shadow: 0px 2px 1px #333333; /*efecto tridimensional del h1, eje x, eje y, difuminado y color*/
+    transition: all 300ms; /*para que todo el h1 tenga una transicion de 300 milisegundos*/
+}
+
+#header h1 a { /*estilo en el enlace del h1 de la cabecera*/
+    color: #70B231; /*color del enlace del texto*/
+}
+
+#header h1 a:hover { /*cuando pasa el raton por encima*/
+    /*que tenga el mismo borde y se ilumine en verde*/
+    text-shadow: 0px 2px 1px #333333, 0px 0px 4px #70B231;
+}
+
+/*BARRA DE NAVEGACIÓN*/
+#nav {
+    width: 100%; /*para que ocupe la barra toda la web*/
+    background-color: #333333; /*color fondo barra*/
+    color: white; /*color texto barra*/
+    height: 40px; /*altura de la barra*/
+    font-family: sans-serif, helvetica, Arial; /*fuentes del texto de la barra*/
+    font-size: 14px; /*tamaño fuente texto barrra*/
+    box-shadow: 0px 0px 2px gray; /*0px en X e Y (para tener la sombra en el centro) y 2px de difuminado de la sombra de color gris*/
+}
+
+#nav ul { /*estilos de las lista de la barra de navegación*/
+    list-style: none; /*para quitar los puntitos/numeros de la lista*/
+    text-decoration: none; /*quitar subrayados y otros estilos predeterminados*/
+    margin: 0px auto; /*0px + auto centra horizontalmente el elemento. PD:margin es margen externo*/
+    width: 1090px; /*le ponemos una anchura fija a la barra*/
+}
+
+/*elegimos de manera más precisa para luego poder hacer los desplegables*/
+#nav > ul > li { /*Justo el primer ul de #nav y justo el primer li del ul*/
+    line-height: 40px; /*para centrarlo verticalmente*/
+    float: left; /*para flotar y que se pongan uno al lado del otro*/
+    border-right: 1px solid gray; /*ponemos el borde derecho que separara cada elemento de la barra*/
+    transition: all 300ms; /*tran*/
+}
+
+#nav > ul > li a { /*seleccionamos los enlaces de los li que van justo despues del ul que va justo después de #nav*/
+    display: block; /*para que actuen como bloques y poder modificarlos como queramos Y PODER HACER CLIC EN LA CAJA y que FUNCIONE el enlace*/
+    padding-left: 20px; /*para separarlos unos de otros con un margen izquierdo interno*/
+    padding-right: 20px; /*para separarlos unos de otros con un margen derecho interno*/
+    color: white; /*color blanco a los enlaces*/
+    text-decoration: none; /*quitamos el subrrayado de los enlaces por defecto*/
+}
+
+#nav > ul > li > a:first-child { /*para seleccionar muy especificamente el primer hijo con la pseudo-clase first-child*/
+    border-left: 1px solid gray; /*para que el primer elemento "INICIO" tenga borde a su izq*/
+}
+
+#nav > ul > li:hover { /*ahora damos el efecto para resaltar al pasar el raton por los primeros elementos que haya como hijos del elemento padre de la #nav*/
+    background-color: #70B231; /*cambia el color de fondo de la caja al pasar el raton*/
+    box-shadow: 0px 0px 4px green inset; /*que no se mueva la sombra (0px en X e Y), se ilumina en verde internamente con inset*/ 
+}
+
+#aside li { /*la lista de enlaces de abajo del aside*/
+    margin-top: 8px; /*margen externo superior*/
+    margin-bottom: 5px; /*margen externo inferior*/
+    margin-left: 20px; /*margen externo izquierdo*/
+    list-style: square; /*que la lista sean cuadraditos*/
+}
+
+/*MENU DESPLEGABLE*/
+#nav > ul > li > ul { /*seleccionamos la lista de desplegables, le damos estilos a la caja*/
+    display: none; /*ocultamos el html del submenu de desplegables*/
+    position: absolute; /*para que tenga una posicion absoluta, que no desfigure el sitio web ni sobresalga*/
+    width: 160px; /*le ponemos este ancho*/
+    box-shadow: 0px 2px 2px gray; /*le ponemos una sombra gris 2px hacia abajo (eje Y), 2px de difuminado*/
+    z-index: 1; /*para que este por encima del resto de elementos, se superponga arriba*/
+}
+
+#nav > ul > li:hover > ul { /*cuando pase el raton encima del li del menu principal, el ul consiguiente del menu desplegable se verá*/
+    display: block;
+}
+
+#nav > ul > li:hover > ul > li { /*seleccionamos los li del menu desplegable cuando pasemos el raton por encima de los li del menu principal*/
+    background-color: #f2f1f0; /*color del fondo de la cajita de cada li del menu desplegable*/
+    border-bottom: 1px solid #d6d6d6; /*añadimos un borde abajo de cada li*/
+    padding: 8px; /*para separar los elementos añadimos margenes internos*/
+    line-height: 25px; /*centrar verticalmente*/
+    font-size: 13px; /*tamaño texto*/
+    transition: all 300ms; /*le damos transicion a todo el elemento de 300ms para el efecto que haremos ahora después*/
+}
+
+#nav > ul > li:hover > ul > li a { /*seleccionamos los enlaces del menu desplegable*/
+    color: #666666; /*le damos un color base al texto de los menus desplegables*/
+}
+
+#nav > ul > li:hover > ul > li:hover { /*seleccionamos la caja de los li de los menud desplegables cuando pasamos el raton por encima*/
+    box-shadow: 0px 0px 2px #ccc inset; /*hacemos que se ilumine internamete, sin desplazamiento X ni Y y con 6px de degradado*/
+    background-color: rgb(215, 215, 215);
+}
+
+#nav > ul > li:hover > ul > li > a:hover { /*hacemos que los enlaces-texto del menu desplegable al pasar el raton*/
+    color: #70B231; /*cambie su texto a color verde*/
+    font-weight: bold; /*se pongan en negrita*/
+}
+
+/*CONTENIDO*/
+#content {
+    width: 1250px; /*anchura de todo el contenido principal, el <main> de la página*/
+    min-height: 1100px; /*altura mínima para que tenga un mínimo de scroll*/
+    margin: 0px auto; /*centra el contenido independientemente de todo*/
+    font-family: sans-serif, Arial, Helvetica; /*le ponemos las fonts a todo salvo que luego se pongan otras mas especificas*/
+}
+
+
+/*BARRA LATERAL*/
+#aside, #frase {
+    width: 200px; /*anchura de 200px a la caja del sidebar*/
+    float: left; /*flotamos la caja a la izquierda*/
+    margin: 30px; /*margen externo de 30px*/
+    background-color: white; /*color de fondo del sidebar*/
+    border: 1px solid #ccc; /*borde que cubre todo el sidebar*/
+    box-shadow: 1px 2px 2px #ccc; /*añadimos sombreado 2px hacia abajo (eje Y) de 2px de difuminado*/
+    font-family: sans-serif, Arial, helvetica;
+}
+
+#frase { /*ponemos estilos a la barra lateral de leer mas frases*/
+    /*para que #aside y #frase no floten mutuamente a la izquierda porque son posiciones relativas, hacemos:*/
+    /* clear: both; /*Así limpiamos los floats SOLO de #frase, para que no se limpien los flotados de la seccion contigua */
+     /*pero como lo que explicamos antes se quedaba abajo del todo, mejor hacemos float: left; o eliminamos el float y el clear */
+    width: 170px; /*re-especificamos el ancho para que se ajuste mejor*/
+    padding: 10px; /*añadimos margen interior*/
+    font-size: 14px; /*le ponemos tamaño de letra*/
+    font-family: sans-serif; /*cambiamos la fuente del texto*/
+}
+
+#aside .widget { /*seleccionamos los div/widget que tiene el aside*/
+    display: block; /*para que actue como un bloque*/
+    width: 180px; /*anchura un poco más pequeña que el resto de la caja*/
+    margin: 5px auto; /*le damos mas margen externo 5px y ponemos auto para que lo mantenga relativamente centrado*/
+    padding: 8px; /*para darle cierta separacion interna entre las cajas*/
+    padding-left: 10px; /*margen interior izquierdo*/
+    padding-right: 10px; /*margen interior derecho*/
+    font-size: 14px;
+    border-bottom: 1px dashed #333333; /*ponemos el borde entre-cortado/punteado*/
+}
+
+#aside .widget:last-child { /*para que la última caja Enlaces tenga mas margen exterior abajo*/
+    margin-bottom: 20px;
+}
+
+#aside h3 {
+    display: block; /*hacemos que actue como bloque*/
+    color: #333333; /*color del texto del h3*/
+    width: 100%; /*anchura del 100% para que ocupe todo lo que pueda dentro del aside*/
+    text-align: center; /*alineamos horizontalmente el texto*/
+    padding-top: 2px; /*le añadimos margen superior interno*/
+    padding-bottom: 2px; /*le añadimos margen inferior interno*/
+    margin-bottom: 15px; /*metemos mas margen inferior externo*/
+    background: #f2f3f2; /*color de fondo*/
+    border: 1px solid #ccc; /*borde del h3*/
+    border-left: none; /*quitamos el borde izquierdo*/
+    border-right: none; /*quitamos el borde derecho*/
+}
+
+/*FORMULARIOS BARRA LATERAL*/
+#aside div label, /*Ahora damos margenes a todos los elementos de los formularios de la barra lateral*/
+#aside div input[type="text"],
+#aside div input[type="email"],
+#aside div input[type="password"],
+#aside div a {
+    display: block; /*para que actuen en bloque y poder moverlos*/
+    width: 95%; /*anchura a todo de casi el 100% pero no del todo*/
+    margin-top: 2px; /*para separar todo un poco por arriba*/
+    margin-bottom: 2px; /*para separar todo un poco por abajo*/
+}
+
+#aside div input[type="button"], /*Ahora damos margenes a los botones de la barra lateral*/
+#aside div input[type="submit"],
+#aside div button{
+    margin-top: 4px; /*margen exterior superior*/
+    margin-bottom: 10px; /*margen exterior inferior*/
+}
+
+#aside input, /*ahora centraremos todos los inputs y labels del aside*/
+#aside label{
+    margin: 0px auto; /*damos un margen automatico para que se mantenga centrado*/
+    text-align: center; /*alineamos el texto al centro*/
+}
+
+/*SECCIONES*/
+#sections {
+    float: right; /*para que me lo mueva-flote a la derecha*/
+    width: 75%; /*para que la anchura ocupe lo que debe*/
+    font-family: sans-serif, Arial, Helvetica; /*las fuentes de texto*/
+    margin-right: 20px; /*un margen externo derecho para separarlo del borde*/
+}
+
+#sections .titulo{
+    font-size: 24px; /*agrandamos el texto*/
+    font-family: "Fjalla"; /*ponemos la fuente importada Fjalla*/
+    font-weight: normal; /*indicamos que el grosor sea normal*/
+    letter-spacing: 1px; /*espaciamos entre las letras*/
+    text-align: center; /*alineamos el texto al centro*/
+    padding-top: 20px; /*añadimos margen interior por arriba*/
+    padding-bottom: 10px; /*añadimos margen interior por abajo*/
+    border-bottom: 1px solid #ccc; /*ponemos el borde inferior/linea*/
+    margin-top: -20px; /*para que suba hacia arriba*/
+}
+
+#sections section{ /*seleccionamos todas las <section> que hay dentro de <div id="sections"> */
+    margin-top: 40px; /*para que lo separe por arriba*/
+    background-color: white; /*color de fondo*/
+    padding: 20px; /*margenes interiores*/
+    border: 1px solid #ccc; /*borde de la seccion*/
+    box-shadow: 0px 0px 4px #c9c9c9; /*sombra*/
+    color: #333333; /*color texto*/
+    font-size: 16px; /*tamaño fuente*/
+    overflow: hidden; /*para que todo lo que sobresalga de las secciones se oculte y no haya barra de scroll*/
+}
+
+#sections .article { /*seleccionamos todos los articulos dentro de #sections*/
+    margin: 10px; /*para que generalmente tenga margen exterior de 10px*/
+    margin-top: 20px; /*pero que por arriba se le añadan 20px*/
+    margin-bottom: 20px; /*y que por abajo se le añadan 20px*/
+}
+
+#sections .date { /*los span clase date*/
+    color: gray; /*color texto*/
+    font-size: 14px; /*tamaño de texto más pequeño que el resto para que no destaque tanto*/
+}
+
+#sections .stickerOne,
+#sections .stickerTwo{
+    position: absolute;
+    margin-top: -38px; /*lo movemos hacia arriba con un margen externo en NEGATIVO*/
+    z-index: 0; /*para que se mantenga en ese nivel de posicionado respecto a otros elementos/capas*/
+}
+
+#sections .stickerTwo{
+    margin-left: 860px; /*para que se mueva mucho a la izquierda y se quede puesto a la derecha*/
+}
+
+#history {
+    float: right; /*flotamos a la derecha, para que el enlace ese se ponga a la derecha*/
+    margin-top: 20px; /*damos margen exterior superior para separarlo de Noticias del Instructor*/
+    margin-right: 20px; /*para que se quede ajustado a la caja superior Instructor*/
+}
+
+/*PIE DE PÁGINA*/
+#footer {
+    width: 100%; /*anchura de toda la pagina*/
+    margin: 0px auto; /*centrar el contenido*/
+    text-align: center; /*centramos el texto*/
+    margin-top: 40px; /*ponemos margen superior externo*/
+    background-color: #333333; /*color fondo*/
+    padding-top: 10px; /*margen interior superior de 10px*/
+    padding-bottom: 10px; /*margen interior inferior de 10px*/
+    color: white; /*color texto*/
+    font-family: sans-serif; /*fuente*/
+    font-size: 14px; /*tamaño letra*/
+    box-shadow: 0px 0px 2px gray; /*sombra de 2px*/
+}

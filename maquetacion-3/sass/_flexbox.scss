@@ -1,0 +1,73 @@
+// Flexbox cabecera
+#header {
+    display: flex; //Para que se ponga un elem al lado del otro
+    flex-direction: row; //que se comporte como por defecto, en formato de fila
+    flex-wrap: wrap; //para que si algo se sale de la caja, lo ponga debajo y no sobrepase
+    align-items: center; //centra verticalmente;
+}
+
+.logo{
+    flex-grow: 1; //para que cuando la pantalla se reduzca, ocupen todo el ancho
+    flex-basis: 65%; //Para que tenga un minimo de 65%
+}
+
+#menu{
+    flex-grow: 1; //para que cuando la pantalla se reduzca, ocupen todo el ancho
+    flex-basis: 30%; //para que tenga ese tamaño por defecto
+
+    > ul {
+        display: flex; //para que sea un elemento flex;
+        flex-direction: row; //para que actue como una fila
+        flex-wrap: wrap; //para que si se sale algo, lo ponga abajo
+        align-items: center; //para que se pongan en el medio, en vez de line-height
+        justify-content: space-between; //para que haya un espacio entre cada elemento y que los elementos de los bordes esten pegados tanto en start como end
+
+    }
+}
+
+
+#content {
+    display: flex; //para que actue como flexbox y se ponga al lado del sidebar
+    justify-content: space-between; //le pone un espacio entre medias a cada elemento
+}
+
+#projects {
+    display: flex;
+    flex-flow: row wrap; //metemos flex-direction: row (actue como fila) y flex-wrap: wrap (si se sale algo, lo ponga abajo)
+    justify-content: space-between; //para que lo ordene y meta un espacio de por medio
+    flex-basis: 80%; //asi le da un tamaño por defecto
+}
+
+.project {
+    flex-basis: 250px; //min-width
+    flex-grow: 1; //para si es necesario, cada elemento se ajuste como debe
+
+}
+
+#sidebar {
+    // order: 2; - podriamos cambiarle el orden a la sidebar asi de rapido
+    flex-basis: 15%; //como es un elemento dentro de un flexbox, le ponemos el flex-basis
+    display: flex; //convertimos todo lo de dentro en un contenedor de flexbox
+    flex-direction: column; //no queremos que sean filas, si no columnas, uno debajo de otro
+    flex-wrap: wrap; //por si se sale algo lo ajuste
+}
+
+#footer {
+    display: flex; //para que sea elemento flexbox
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+
+    .logo {
+        flex-basis: auto;
+        flex-grow: 1;
+        order: 2;
+    }
+
+    .info {
+        flex-grow: 1;
+        order: 1;
+    }
+}
+
