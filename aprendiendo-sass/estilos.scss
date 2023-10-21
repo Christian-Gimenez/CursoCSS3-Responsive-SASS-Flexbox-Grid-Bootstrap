@@ -1,0 +1,5 @@
+// Modulos
+/*Para cargar otro modulo sass lo llammamos _modulo.scss
+e importamos al principal con @use "_modulo.sxss";  */
+@use "base";  
+@use "encabezado";

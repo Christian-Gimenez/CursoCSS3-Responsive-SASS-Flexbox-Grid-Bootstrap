@@ -1,0 +1,72 @@
+#boton{
+    display: block; /*para que el boton funcione como un bloque*/
+    padding: 20px; /*margenes internos para agrandar el boton por dentro o espaciar el texto interior*/
+    background-color: green; /*color de fondo del boton*/
+    color: white; /*color de la letra*/
+    width: 200px; /*anchura del boton*/
+    text-align: center; /*alinear al centro el texto del boton*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /*fuente del texto*/
+    font-weight: bold; /*grosor del texto - negrita*/
+    text-decoration: none; /*quitar el subrayado por defecto*/
+    border: 5px solid rgb(0, 64, 0); /*borde del boton*/
+    /* transition: all 1s; para que todos los estilos tengan una transicion de 1 segundo */
+    /* transition: all 500ms; para que todos los estilos transicionen en 500 milisegundos*/
+    /* transition: border 500ms; para que el borde transicione en 500milisegundos*/
+    transition: border 500ms, background 3s, border-radius 1s; /*el borde transiciona en 500ms, el fondo en 3s y el radio del borde en 3s*/
+}
+
+#boton:hover{ /*pseudo-clase para que cambie el estilo del boton al pasar el raton por encima*/
+    border-radius: 15px; /*redondear los bordes del boton*/
+    background: orangered; /*color del fondo del boton*/
+    border: 5px solid red; /*borde del boton*/
+}
+
+#caja{
+    margin-top: 25px;
+    width: 250px;
+    height: 250px;
+    background-color: lightseagreen;
+    color: white;
+    border: 5px solid black;
+    font-size: 20px;
+    text-align: center;
+    line-height: 250px;
+
+    /*animaciones:*/
+    animation-name: desplazamiento; /*seleccionamos la animacion que hacemos más abajo*/
+    animation-duration: 20s; /*indicamos el tiempo de duración en terminar la animación*/
+    animation-iteration-count: infinite; /*para hacer infinita la animación*/
+    animation-timing-function: linear; /*ajustamos el timing para que todo el rato vaya a la misma velocidad*/
+}
+
+/* para hacer los keyframes de las animaciones de manera corta, sólo con 2 keyframes 
+@keyframes desplazamiento{
+    from {
+        margin-left: 0px;
+    }
+    to{
+        margin-left: 1200px;
+    }
+} */
+
+@keyframes desplazamiento{ /*hacemos que vaya y vuelva la animacion usando más keyframes por porcentajes*/
+    0%{
+        margin-left: 0px;
+        transform: rotate(0deg); /*para transformar y que rote a 0º*/
+    }
+    50%{
+        margin-left: 1200px;
+        transform: rotate(360deg); /*para que siga rotando hasta los 360º*/
+        border-radius: 999px; /*hacemos que se vuelva una bola y vuelva luego a ser cuadrado*/
+    }
+    75%{
+        background: red; /*se convierte en rojo progresivamente*/
+    }
+    77%{
+        border: 10px dashed blue; /*se transforma en un borde distinto*/
+    }
+    100%{
+        margin-left: 0px;
+        transform: rotate(0deg); /*para que siga rotando y vuelva al inicio 0º*/
+    }
+}

@@ -1,0 +1,54 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul li{
+    font-size: 20px;
+}
+
+ul li:first-child{ /*Esta pseudoclase elige el primer hijo*/
+    color: purple;
+    font-weight: bold;
+}
+
+ul li:nth-child(2){ /*Elige el hijo numero (2)*/
+    color: orange;
+    font-weight: bold;
+}
+
+ul li:last-child{ /*Elige el último hijo*/
+    color: blue;
+    font-weight: bold;
+}
+
+#mi-enlace{
+    font-size: 30px;
+    color: lightsalmon;
+}
+
+#mi-enlace:link{ /*Darle un estilo cuando NO he visitado el enlace*/
+    color: red;
+}
+
+#mi-enlace:visited{ /*Darle estilo cuando SI he visitado el enlac*/
+    color: green;
+}
+
+#mi-enlace:hover{ /*Cuando yo pase por encima con el ratón*/
+    color: blue;
+}
+
+#mi-enlace:active{ /*Justo cuando esté pulsando/mientras lo esté pulsando - le cambie el estilo*/
+    background-color: goldenrod;
+    font-family: impact;
+    color: royalblue;
+}
+
+input[type="text"]{ /*selector de atributo html*/
+    margin-top: 20px; /*margen interior arriba*/
+    padding: 10px; /*margenes exteriores*/
+}
+
+input[type="text"]:focus{ /*cuando yo esté haciendo foco en ese campo me cambia el estilo*/
+    border: 4px dashed red;
+}

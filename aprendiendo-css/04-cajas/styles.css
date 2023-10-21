@@ -1,0 +1,49 @@
+*{
+    margin: 0px; /*limpiamos de margenes exteriores*/
+    padding: 0px; /*limpiamos de margenes interiores*/
+}
+
+/*#caja1,
+#caja2{
+
+}*/
+
+body{
+    padding: 40px; /*añadimos margen interior a todo el body para separarlo*/
+}
+
+#cajas{
+    max-width: 1035px; /*le damos un ancho máximo a las cajas de 1035px*/
+    border: 1px solid black;
+}
+
+.caja{
+    display: block; /*Usamos esto para indicar que el elemento funcione como un bloque/caja y no en linea*/
+    width: 250px; /*damos 250px ancho a la caja*/
+    height: 250px; /*damos 250px alto a la caja*/
+    /* min-width: ;
+       max-width: ; */
+    background-color: lightblue;
+    border: 10px solid red;
+    margin: 15px; /*damos un margen exterior*/
+    margin-top: 15px; /*damos 15px de margen exterior superior*/
+    margin-bottom: 40px; /*damos 40px de margen exterior inferior*/
+    margin-left: 24px; /*damos 24px de margen exterior a la izq*/
+    margin-right: 10px; /*damos 10px de margen exterior a la der*/
+    padding: 20px; /*damos 20px margen interior*/
+    padding-bottom: 34px;  /*damos 34px margen interior inferior*/
+    float: left; /*para que las cajas floten a la izquierda una al lado de otra*/
+}
+
+.caja p{
+    font-weight: bold; /*para darle grosor al texto*/
+    text-align: center; /*alineamos horizontalmente el texto al centro*/
+    font-size: 20px; /*tamaño del texto*/
+    font-family: Arial, Helvetica, sans-serif; /*cambiamos la fuente del texto*/
+    line-height: 235px; /*para alinear verticalmente el texto en la caja*/
+}
+
+.clearfix{
+    float: none; /*quitamos los flotados*/
+    clear: both; /*limpiamos a ambos lados para que no se monten los elementos contiguos*/
+}

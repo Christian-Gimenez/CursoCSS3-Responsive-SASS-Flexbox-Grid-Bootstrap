@@ -1,0 +1,171 @@
+// Variables
+$fuente-tipica: sans-serif, Helvetica, Arial;
+$color-fondo: #ccc;
+$color-letra: red;
+$color-secundario: rgb(133, 0, 0);
+
+// Uso de variables
+body {
+    background-color: $color-fondo;
+}
+
+h1 {
+    color: $color-letra;
+    font-family: $fuente-tipica;
+}
+
+p {
+    color: $color-secundario;
+}
+
+// Anidación
+.caja {
+    border: 1px solid black;
+    background-color: white;
+    width: 500px;
+    margin: 0px auto;
+    padding: 10px;
+    text-align: center;
+
+    h1 {
+        color: blue;
+    }
+
+    p {
+        color: green;
+    }
+
+    .info {
+        font-size: 10px;
+
+        .author {
+            font-size: 15px;
+            font-weight: bold;
+            color: orange;
+            text-shadow: 0px 0px 1px black,
+                1px 1px 1px black,
+                2px 1px 1px black,
+                1px 2px 1px black;
+
+        }
+    }
+}
+
+// Mixins / Funciones
+//usamos @mixin para crear la funcion, nombreFuncion(){ instrucciones; }
+@mixin crearBordes($color, $size, $shadow) {
+    //ponemos los parametros que seran variables separadas por ","
+    border: $size solid $color; //sustituimos en las reglas CSS los valores por los parametros/variables de la funcion
+    border-radius: $size;
+    box-shadow: 0px 0px $size $shadow;
+}
+
+.caja {
+    @include crearBordes(rgb(21, 161, 208), 5px, white); //llamamos con @include y ponemos nombreFuncion();
+}
+
+.listado {
+    @include crearBordes(red, 10px, black); //indicamos los parametros de la funcion
+}
+
+@mixin clearFix() {
+    clear: both;
+    float: none;
+}
+
+// Herencia
+//ponemos %nombreHerencia { valores CSS }
+%alert-normal {
+    //parecido al mixins pero sin parametros
+    border: 5px solid gray;
+    background: black;
+    color: white;
+    font-family: monospace;
+    padding: 10px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.alert {
+    @extend %alert-normal; //llamamos a la herencia con @extend %nombreHerencia;
+}
+
+.alert-danger {
+    //al llamar a la herencia, heredamos los estilos de %alert-normal
+    @extend %alert-normal;
+    // y después podemos cambiar algunos si lo deseamos
+    color: red;
+    border-color: red;
+}
+
+//Esto es una forma de heredar estilos para usar menos clases en html/css
+.alert-success {
+    @extend %alert-normal;
+    color: green;
+    border-color: green;
+}
+
+// Operadores
+h1 {
+    font-size: 20px + 5px - 1px; //podemos hacer operaciones matematicas con SASS
+}
+
+$caja: 200px; //establecemos el anchura de la caja en la variable $caja
+$wrap: 900px; //establecemos la anchura del wrap que contiene las cajas en la variable $wrap
+
+.cajas {
+    width: $wrap;
+    margin: 0px auto;
+}
+
+.caja {
+    //convertimos medidas fijas en algo porcentual
+    width: $caja / $wrap * 100%; //dividimos el ancho de las cajas entre el ancho del wrap que las contiene y lo multiplicamos por 100%
+    margin: 10px;
+    float: left;
+}
+
+.clearfix {
+    @include clearFix();
+}
+
+// Condicionales - if
+$color-fondo: orange; // reasignamos el valor de $color-fondo = negro;
+h1 {
+    /* si el color-fondo es igual a #ccc
+    @if $color-fondo ==#ccc {
+        color: black; //el color del texto sera negro
+    }
+
+    @else { // si no... 
+        color: lightsalmon; //será salmon
+    } */
+
+    /* si el color-fondo NO es igual a #ccc
+    @if $color-fondo != #ccc {
+        color: black; //el color del texto sera negro
+    } @else { //si no...
+        color: lightblue; //sera azul clarito
+    } */
+
+    /* si color-fondo es igual a #ccc*/
+    @if $color-fondo == #ccc {
+        color: black; //el color del texto sera negro
+    } @else if $color-fondo == black { //...si no, si el color-fondo es igual a negro
+        color: lightsalmon; // el color del texto sera salmon
+    } @else { // si no es ninguno de los anteriores
+        color: pink; // el color del texto sera rosa
+    }
+}
+
+// FOR - ...pero tambn existen EACH y WHILE
+$contador: 1; //establecemos la variable $contador con el valor 1
+
+// desde $variable desde el 1 hasta el 10
+@for $contador from 1 through 10 { //hace un bucle que ejecuta el codigo hasta que $contador tenga valor 10
+
+    //clase listas :ultimo-hijo(#{$variable} {}
+    .listado ul li:nth-child(#{$contador}) { //le ponemos a :nth-child() el valor de la variable usando # y poniendolo entre { $variable }
+        font-size: $contador * 2px; //para meter el valor de la variable
+    }
+}

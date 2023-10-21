@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user=scalable=no" />
+  <title>Componentes Bootstrap 5</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+
+</head>
+
+<body>
+
+  <!--CONTENEDOR PRINCIPAL-->
+  <div class="container">
+
+    <!--BARRA NAVEGADORA-->
+    <div class="row">
+      <header class="col-md-12 mt-2">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container-fluid">
+
+            <a class="navbar-brand" href="#">COMPONENTES</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+                <li class="nav-item">
+                  <form class="d-flex mx-2">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+                </li>
+              </ul>
+
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Cryptic-WebDev
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </div>
+    <!--Fin BARRA NAVEGADORA-->
+
+    <!--breadcrumb RUTA WEB-->
+    <div class="row">
+      <div class="col-md-8 mt-3">
+
+        <div class="alert alert-dark pb-1">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="#">Inicio</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="#">Desarrollo Web</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Componentes de Bootstrap
+              </li>
+
+            </ol>
+          </nav>
+        </div>
+        <!--Fin breadcrumb RUTA WEB-->
+
+        <!--SLIDER-->
+        <div id="slider" class="carousel slide mb-3" data-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#slider" data-bs-slide-to="0" class="active" aria-current="true"
+              aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#slider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#slider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" alt="imagen placeholder" name="imagen placeholder"
+                src="https://via.placeholder.com/900x300?text=PRIMERA" />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Mi primera imagen</h5>
+                <p>Practica con el slider</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img class="d-block w-100" alt="imagen placeholder" name="imagen placeholder"
+                src="https://via.placeholder.com/900x300?text=SEGUNDA" />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Mi segunda imagen</h5>
+                <p>Practica con el slider</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img class="d-block w-100" alt="imagen placeholder" name="imagen placeholder"
+                src="https://via.placeholder.com/900x300?text=TERCERA" />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Mi tercera imagen</h5>
+                <p>Practica con el slider</p>
+              </div>
+            </div>
+
+          </div>
+
+          <a class="carousel-control-prev" role="button" data-bs-target="#slider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </a>
+
+          <a class="carousel-control-next" role="button" data-bs-target="#slider" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </a>
+        </div>
+        <!--FIN SLIDER-->
+
+
+        <!--ALERT-->
+        <div class="alert alert-success alert-dismissible fade show">
+          <strong>Increible!!</strong> Te has registrado correctamente :)
+
+          <button type="button" class="btn-close" data-bs-dismiss="alert">
+            <!-- se puede prescindir de aria-label="Close" -->
+            <!-- En Bootstrap 5 ya no hace falta esta X <span aria-hidden="true">&times;</span> -->
+          </button>
+        </div>
+        <!--Fin ALERT-->
+
+        <!--BADGE-->
+        <h2>
+          <span class="badge bg-success">
+            NUEVO
+          </span>
+          Componentes de Bootstrap
+        </h2>
+        <p>Esto es una clase sobre el uso de badges en bootstrap
+          <span class="badge rounded-pill bg-danger text-decoration-none">
+            Articulo nuevo
+          </span>
+        </p>
+        <!--Fin BADGE-->
+      </div>
+
+      <!--BARRA LATERAL-->
+      <aside class="col-md-4">
+        <!--MODAL-->
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Sacar ventana
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">¿Estas seguro de querer ver esta ventana?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Una vez cerrada la podrás abrir muchas más veces :)
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Guardar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--COLLAPSE-->
+        <a class="btn btn-success mt-3" data-bs-toggle="collapse" href="#informacion" role="button">
+          Mostrar información
+        </a>
+        <div class="collapse" id="informacion">
+          <div class="card card-body bg-dark text-white mt-2">
+            Esta es la información oculta.
+          </div>
+        </div>
+
+        <!--BARRA PROGRESO-->
+        <div class="progress mt-5">
+          <div id="barra-progreso" class="progress-bar bg-success w-0" role="progressbar">
+            0%
+          </div>
+        </div>
+
+        <script>
+          //Ejemplo Victor
+          var contador = 0;
+          setInterval(function () {
+            if (contador < 100) {
+              contador++;
+              var barra = document.querySelector("#barra-progreso");
+              barra.style.width = contador + '%';
+              barra.innerHTML = contador + '%';
+            }
+          }, 250);
+
+          /*Ejemplo alumno que detiene el setInterval()
+          var contador = 0;
+
+          const interval = setInterval(function () {
+            contador++;
+            var barra = document.querySelector("#barra-progreso");
+            barra.style.width = contador + '%';
+            barra.innerHTML = contador + '%';
+            if (contador > 99) clearInterval(interval);
+          }, 250);
+          */
+        </script>
+
+        <!--TOOLTIPS-->
+        <button type="button" class="btn-tool btn btn-info mt-3" data-bs-toggle="tooltip" data-bs-placement="left"
+          title="Si das click sacarás una alerta">
+          Alerta 1
+        </button>
+        <button type="button" class="btn-tool btn btn-warning mt-3" data-bs-toggle="tooltip" data-bs-placement="bottom"
+          title="Si das click sacarás una alerta">
+          Alerta 2
+        </button>
+        <!--POPOVER-->
+        <button type="button" class="btn-pop btn btn-danger mt-3" data-bs-container="body" data-bs-toggle="popover"
+          data-bs-placement="top" data-bs-content="Esto es un popover" title="Titulo popover">
+          Alerta 3
+        </button>
+
+        <hr />
+        <form>
+          <fieldset class="bg-light p-3 pb-4 border border-secondary rounded">
+            <div class="d-flex m-auto bg">
+              <legend>Formulario darse de alta</legend>
+            </div>
+
+            <div class="d-flex">
+              <!--Lo de abajo sustituye este label <label for="nombre" class="m-2 form-label">Nombre</label>-->
+              <div class="input-group" `>
+                <div class="input-group-preprend">
+                  <span class="input-group-text mt-2 mb-2"><label for="nombre">Nombre</label></span>
+                </div>
+                <input type="text" id="nombre" placeholder="Pepe Paco" class="mt-2 mb-2 me-2 form-control" />
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between">
+              <label for="genero" class="m-2 form-check-label">Género</label>
+              <select class="flex-grow-1 m-2 form-select" id="genero">
+                <option>Hombre</option>
+                <option>Mujer</option>
+                <option>Otro/No binarie</option>
+              </select>
+            </div>
+
+
+            <div class="d-flex justify-content-around">
+              <label for="email" class="m-2 form-label">Email</label>
+              <input type="email" id="email" placeholder="ejemplo@pacazo.com" class="flex-grow-1 m-2 form-control" />
+            </div>
+
+            <div class="d-flex justify-content-around">
+              <label for="passwrd" class="m-2 form-label">Contraseña</label>
+              <input type="password" id="passwrd" placeholder="Mi_Contraseña01" class="flex-grow-1 m-2 form-control" />
+            </div>
+
+            <div class="col d-flex justify-content-around mt-2">
+              <input type="reset" class="btn btn-outline-secondary" value="Limpiar formulario" />
+              <input type="submit" class="btn btn-outline-primary" value="Enviar" />
+            </div>
+          </fieldset>
+
+        </form>
+
+      </aside>
+      <!--Fin BARRA LATERAL-->
+
+      <!--CARDS-->
+      <div class="row col-md-8">
+        <div class="card col p-0 me-3">
+          <img class="card-img-top img-fluid" alt="imagen placeholder" name="imagen placeholder"
+            src="https://via.placeholder.com/300x200" />
+          <div class="card-body">
+            <h3 class="card-title">Tarjeta 1</h3>
+            <p class="card-text">Hola, entra a este articulo y aprenderas Bootstrap</p>
+            <a href="#" class="btn btn-dark">Entrar</a>
+          </div>
+        </div>
+
+        <div class="card col p-0 me-3">
+          <img class="card-img-top img-fluid" alt="imagen placeholder" name="imagen placeholder"
+            src="https://via.placeholder.com/300x200" />
+          <div class="card-body">
+            <h3 class="card-title">Tarjeta 2</h3>
+            <p class="card-text">Hola, entra a este articulo y aprenderas Bootstrap</p>
+            <a href="#" class="btn btn-warning">Entrar</a>
+          </div>
+        </div>
+
+        <div class="card col p-0 me-3">
+          <img class="card-img-top img-fluid" alt="imagen placeholder" name="imagen placeholder"
+            src="https://via.placeholder.com/300x200" />
+          <div class="card-body">
+            <h3 class="card-title">Tarjeta 3</h3>
+            <p class="card-text">Hola, entra a este articulo y aprenderas Bootstrap</p>
+            <a href="#" class="btn btn-info">Entrar</a>
+          </div>
+        </div>
+
+      </div>
+      <!--Fin CARDS-->
+
+      <!--PAGINATION-->
+      <div class="row col-md-8">
+        <nav aria-label="pagination" class="m-3">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#">
+                &laquo;
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">
+                1
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">
+                2
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">
+                3
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">
+                4
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">
+                &raquo;
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!--Fin PAGINATION-->
+
+      <div class="row">
+        <!--JUMBOTRON - no disponible en Bootstrap 5-->
+        <style type="text/css">
+          .jumbotron {
+            padding: 2rem 1rem;
+            margin-bottom: 2rem;
+            background-color: #e9ecef;
+            border-radius: .3rem;
+          }
+        </style>
+
+        <div class="jumbotron my-3 col-md-8">
+          <h1 class="display=6">Bienvenido a mi WEB</h1>
+          <p class="lead">Esto es un jumbotron en Bootstrap</p>
+          <hr class="my-2" />
+          <p>Identificate en la web</p>
+          <a href="#" class="btn btn-primary btn-lg">Login</a>
+        </div>
+
+        <!--Fin JUMBOTRON-->
+      </div>
+
+      <table clasS="table table-striped table-bordered table-hover my-5 row col-8">
+        <thead class="table-dark">
+
+          <tr class="row">
+            <th class="col-4">Nombre</th>
+            <th class="col-4">Apellidos</th>
+            <th class="col-4">Edad</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr class="row">
+            <td class="col-4">Matt</td>
+            <td class="col-4">Heafy</td>
+            <td class="col-4">36</td>
+          </tr>
+
+          <tr class="row">
+            <td class="col-4">Corey</td>
+            <td class="col-4">Beaulieu</td>
+            <td class="col-4">38</td>
+          </tr>
+
+          <tr class="row">
+            <td class="col-4">Paolo</td>
+            <td class="col-4">Gregoletto</td>
+            <td class="col-4">36</td>
+          </tr>
+
+          <tr class="row">
+            <td class="col-4">Alex</td>
+            <td class="col-4">Bent</td>
+            <td class="col-4">29</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+
+
+    </div>
+
+
+
+
+
+    <!--Importamos JQUERY y JS de Bootstrap-->
+    <script type="text/javascript" src="jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="jquery/popper.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+    <!--Script para hacer el slider-->
+    <script>
+      $(document).ready(function () {
+        $(".carousel").carousel({
+          interval: 3000
+        });
+
+        $(".btn-tool").tooltip();
+
+        $(".btn-pop").popover();
+      });
+    </script>
+</body>
+
+</html>

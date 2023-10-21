@@ -1,0 +1,102 @@
+body {
+    --rojo: red; /*establecemos variable en CSS3 (experimental, no todos los navegadores lo soportan)*/
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#layout {
+    display: flex; /*Para que actue como flexbox y se ponen una al lado de otra como en float: left;*/
+    /* display: inline-flex; para que actue como flexbox en linea, y coge un width: auto; para ocupar todo el espacio de la caja que lo contenga*/
+    /* flex-direction: row; valor por defecto de flex*/
+    /* flex-wrap: wrap; para que no sobresalgan los elementos y se coloquen abajo*/
+    flex-flow: row wrap; /*Une el flex-direction con el flex-wrap*/
+    
+
+    border: 3px solid black;
+    padding: 5px;
+
+}
+
+.caja,
+.box {
+    /*flex-grow: 1; /*se pone a 1 para que las cajas sean flexibles, la propiedad sirve para indicar cuánto puede crecer un elemento flexible dentro de otro elemento flexbox*/
+
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border: 4px solid #222;
+    margin: 10px;
+    background: gray;
+}
+
+.red {
+    flex-grow: 5; /*ocupara más que el resto*/
+    /*order: 4;*/
+    background: var(--rojo); /*llamamos a la variable con var(--miVariable);*/
+
+}
+
+.green {
+    flex-grow: 2;
+    /*order: 2; cuanto menor sea el order, antes estara el elemento*/
+    background: green;
+}
+
+.blue {
+    flex-grow: 0; /*para hacer el flex-shrink tenemos que darle un flex-grow 0;*/
+    flex-shrink: 2; /*sirve para definir la capacidad de un elemento en reducirse, es lo opuesto a flex-gorw*/
+    /*order: 1; para que se coloque primero, si no hay mas order en otros, hay que ponerle -1*/
+    background: blue;
+}
+
+.orange {
+    flex-grow: 10; /*será la que más ocupe y el resto se adaptarán al espacio que les deje esta caja*/
+    /*order: 3;*/
+    background: orange;
+}
+
+#wrap {
+    display: flex; /*para que actue como una caja flexbox*/
+    flex-flow: row wrap; /*row para que actue como filas flex-direction y wrap para que no sobresalgan los elementos y se coloquen flexiblemente*/
+    justify-content: space-around; /*para organizar horizontalmente los elementos*/
+
+    height: 600px;
+    align-items: start; /*para organizar verticalmente los elementos, este hay que ponerlo en el div que contiene el resto de elementos*/
+
+    margin-top: 40px;
+    border: 3px solid black;
+    padding: 5px;
+    text-shadow: 0px 0px 5px black;
+}
+
+.box {
+    flex-grow: 0; /*quitamos el flex-grow para el ejemplo*/
+    /*width: 25%; */
+    /*flex-basis: calc((100% / 3) - 68px); /*aplicamos un calculo para establecer el tamaño base (parecido a width pero en flexbox)*/
+    /*flex-grow: 1; /*mezclando flex-basis con flex-grow conseguimos que sean totalmente adaptables los elementos*/
+
+}
+
+.purple {
+    align-self: flex-start; /*para que empiece desde arriba verticalmente*/
+    background-color: purple;
+}
+
+.gray {
+    margin-top: 10%;
+    background-color: gray;
+}
+
+.pink {
+    align-self: center; /*para que se quede en el centro verticalmente*/
+    background-color: pink;
+}
+
+.lightblue {
+    align-self: flex-end;
+    /*flex-basis: 100%;*/
+    background-color: lightblue;
+}
+

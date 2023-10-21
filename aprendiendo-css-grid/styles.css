@@ -1,0 +1,233 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*-----------------GRID AREAS----------------------*/
+#website-areas{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 150px 70px 1fr 80px;
+
+    grid-template-areas:
+    "cabecera cabecera cabecera cabecera cabecera"
+    "menu menu menu menu menu"
+    "lateral contenido contenido contenido contenido"
+    "pie pie pie pie pie";
+
+
+    width: 75%;
+    /* height: 100vh; viewport height - altura del navegador 100% */
+    height: 700px;
+    margin: 0px auto;
+    border: 1px solid #ccc
+}
+
+#website-areas #cabecera{
+    grid-area: cabecera;
+
+    display: grid;
+
+    background-color: blue;
+    color: white;
+}
+
+#website-areas #cabecera h1 {
+    align-self: center; /*para alinear verticalmente los elementos en grid*/
+}
+
+#website-areas #menu * {
+    padding: 0px;
+    margin: 0px;
+}
+
+#website-areas #menu{
+    grid-area: menu;
+    display: grid;
+
+    background-color: lightblue;
+    color: black;
+}
+#website-areas #menu ul {
+    display: grid;
+    align-self: center;
+    grid-template-columns: repeat(9, 1fr);
+}
+
+#website-areas #contenido{
+    grid-area: contenido;
+
+    display: grid;
+    grid-gap: 25px;
+    margin: 25px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    background-color: #eee;
+}
+
+#website-areas #contenido article{
+    background-color: #ccc;
+    border: 1px solid #555;
+}
+
+#website-areas #lateral{
+    grid-area: lateral;
+
+    background-color: orange;
+    color: white;
+}
+
+#website-areas #pie-pagina{
+    grid-area: pie;
+
+    background-color: black;
+    color: white;
+}
+
+
+/*-----------------EJERCICIO COMPLETO------------------*/
+
+#website{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 150px 70px 1fr 80px;
+
+    width: 75%;
+    /* height: 100vh; viewport height - altura del navegador 100% */
+    height: 700px;
+    margin: 0px auto;
+    border: 1px solid #ccc
+}
+
+#cabecera{
+    grid-column: 1 / 6;
+
+    display: grid;
+
+    background-color: blue;
+    color: white;
+}
+
+#cabecera h1 {
+    align-self: center; /*para alinear verticalmente los elementos en grid*/
+}
+
+#menu * {
+    padding: 0px;
+    margin: 0px;
+}
+
+#menu{
+    grid-column: 1 / 6;
+
+    background-color: lightblue;
+    color: black;
+}
+
+#menu ul {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+}
+
+#contenido{
+    grid-column: 1 / 5;
+    grid-row: 3 / 4;
+
+    display: grid;
+    grid-gap: 25px;
+    margin: 25px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    background-color: #eee;
+}
+
+#contenido article{
+    background-color: #ccc;
+    border: 1px solid #555;
+}
+
+#lateral{
+    grid-column: 5 / 6;
+    grid-row: 3 / 4;
+    background-color: orange;
+    color: white;
+}
+
+#pie-pagina{
+    grid-column: 1 / 6;
+    grid-row: 4 / 5;
+
+    background-color: black;
+    color: white;
+}
+
+/*-----------------EJEMPLOS------------------*/
+.layout {
+    width: 80%;
+    height: 600px;
+    margin: 0px auto;
+
+    /*Definimos el layout grid*/
+    display: grid;
+    /*para poner cada elemento grid uno al lado del otro (columnas)*/
+    /* grid-template-columns: calc(50% - 30px) 25% 15% 10%; establecemos un % para cada columna, usamos calc -30px para quitarle todos los margenes dados con grid-gap */
+    /* grid-template-columns: calc(50% - 5px) calc(50% - 5px); podemos usar la funcion css calc para restarle los margenes dados con gap/grid-gap para ajustarlo mejor */
+    /* grid-template-columns: repeat(4, calc(25% - 10px)); con la funcion repeat() podemos establecer el nº columnas y el tamaño a cada una, para evitar poner varias veces lo mismo */
+    grid-template-columns: repeat(3, 1fr); /*usando la ud. de medida fraccion, podemos indicar el tamaño de cada caja*/
+    grid-template-rows: repeat(2, 1fr) 3fr repeat(2, 1fr); /*para establecer las filas*/
+
+    /*Para dar espaciado entre elementos grid*/
+    grid-gap: 10px; /*se usa mas gap a secas que grid-gap*/
+    padding: 10px;
+    
+    border: 3px solid orangered;
+}
+
+.layout .caja {
+    border: 4px solid #222;
+    color: white;
+    background-color: gray;
+    padding: 20px;
+}
+
+.layout .red {
+    /*Para expandir columnas usamos::*/
+    grid-column-start: 1; /*en que linea empieza*/
+    grid-column-end: 4; /*en que linea acaba*/
+    background-color: red;
+}
+
+.layout .blue {
+    grid-column: 2 / 4; /*expandimos la columna de la linea 2 a la 4*/
+    background-color: blue;
+}
+
+.layout .green {
+    grid-row-start: 2;
+    grid-row-end: 6;
+    background-color: green;
+}
+
+.layout .pink {
+    grid-row: 3 / 5;
+    grid-column: 2 / 3; /*expandimos la columna de la linea 1 a la 3*/
+    background-color: palevioletred;
+}
+
+.layout .orange {
+    grid-row: 3 / 5;
+    background-color: orange;
+}
+
+.layout .lightblue {
+    /* podemos hacerlo asi:
+    grid-column-start: 1;
+    grid-column-end: 3; */
+
+    /*o resumido asi*/
+    grid-column: 2 / 4; /*expandimos la columna de la linea 1 a la 4*/
+    background-color: lightseagreen;
+}

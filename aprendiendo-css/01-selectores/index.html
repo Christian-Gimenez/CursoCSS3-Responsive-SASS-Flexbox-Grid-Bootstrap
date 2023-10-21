@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Máster en CSS de Víctor Robles WEB</title>
+        <link rel="stylesheet" type="text/css" href="./styles.css" />
+        <!-- Meter CSS dentro de HTML:
+
+        <style type="text/css">
+            h1 {
+                color: red;
+                font-size: 50px;
+                text-shadow: 0px 0px 10px black;
+                text-decoration: underline;
+            }
+        </style>
+        -->
+    </head>
+    <body>
+        <header>
+            <h1 id="titulo">Máster en CSS con Víctor Robles WEB</h1>
+            <!-- Meter CSS dentro de una etiqueta de HTML: <h1 style="color:brown; font-size: 35px;">Máster en CSS con Víctor Robles WEB</h1> -->
+            <nav>
+                <ul id="menu">
+                    <li><a href="index.html" title="Página de Inicio" >Inicio</a></li>
+                    <li>
+                        <a href="#" title="Temario del Máster">Temario</a>
+                        <ul>
+                            <li><a href="#" title="Temario HTML5">HTML</a></li>
+                            <li><a href="#" title="Temario CSS3">CSS</a></li>
+                            <li><a href="#" title="Temario LESS (pre-procesador CSS)">LESS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" title="Reseñas sobre el Máster en CSS">Reseñas</a></li>
+                    <li><a href="#" title="Formulario de contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div id="descripcion" >
+                <h2>Descripción del curso</h2>
+                <p class="parrafo parrafo1">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultricies eleifend elementum. Nam facilisis ex eget cursus varius. Morbi congue ante mauris. Aenean nec sem in lectus luctus suscipit. Suspendisse vehicula convallis eros ac fermentum. Nunc et ante sed augue aliquet imperdiet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse et orci ipsum. Proin condimentum, dolor ac venenatis varius, nunc sapien vestibulum odio, id vestibulum dolor nulla id mi. Pellentesque vitae sollicitudin urna, at congue lorem. Suspendisse potenti. Maecenas dapibus vitae elit vitae pellentesque. Suspendisse posuere ligula diam, eu eleifend metus cursus ac. Mauris vitae pellentesque ante, et auctor mi.
+                </p>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultricies eleifend elementum. Nam facilisis ex eget cursus varius. Morbi congue ante mauris. Aenean nec sem in lectus luctus suscipit. Suspendisse vehicula convallis eros ac fermentum. Nunc et ante sed augue aliquet imperdiet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse et orci ipsum. Proin condimentum, dolor ac venenatis varius, nunc sapien vestibulum odio, id vestibulum dolor nulla id mi. Pellentesque vitae sollicitudin urna, at congue lorem. Suspendisse potenti. Maecenas dapibus vitae elit vitae pellentesque. Suspendisse posuere ligula diam, eu eleifend metus cursus ac. Mauris vitae pellentesque ante, et auctor mi.
+                </p>
+
+                <p class="parrafo parrafo3">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultricies eleifend elementum. Nam facilisis ex eget cursus varius. Morbi congue ante mauris. Aenean nec sem in lectus luctus suscipit. Suspendisse vehicula convallis eros ac fermentum. Nunc et ante sed augue aliquet imperdiet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse et orci ipsum. Proin condimentum, dolor ac venenatis varius, nunc sapien vestibulum odio, id vestibulum dolor nulla id mi. Pellentesque vitae sollicitudin urna, at congue lorem. Suspendisse potenti. Maecenas dapibus vitae elit vitae pellentesque. Suspendisse posuere ligula diam, eu eleifend metus cursus ac. Mauris vitae pellentesque ante, et auctor mi.
+                </p>
+            </div>
+
+            <div id="usuario">
+                <form>
+                    <fieldset>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" />
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" id="apellidos" name="apellidos" />
+
+                        <input type="submit" value="Enviar"/>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div id="saludo">
+                <h1>Hola soy Víctor Robles WEB</h1>
+            </div>
+
+        </main>
+
+        <footer>
+            Todos los derechos reservados &copy; 2022 - <a href="https://www.victorroblesweb.es" title="Víctor Robles Web" >victorroblesweb.es</a>
+        </footer>
+
+    </body>
+</html>

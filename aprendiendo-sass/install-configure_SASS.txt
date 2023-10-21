@@ -1,0 +1,14 @@
+Para Instalar SASS:
+- instalamos node.js (siguiente-siguiente...)
+- Comprobamos la version de node:
+    cmd> node -v    -    /*Nos dice la version que tenemos instalado*/
+    cmd> npm -v    -    /*Nos dice la version del gestor de paquetes de node.js*/
+- instalamos SASS con el gestor de paquetes de nodejs:
+    cmd> npm install -g sass   -    /*-g para instalarlo DE FORMA GLOBAL, no solo en la carpeta en la que estemos*/
+
+Compilar SASS:
+- Vamos al directorio de nuestra web:
+    cmd> cd    -    /*Ponemos la ruta que sea*/
+- Ejecutamos en el cmd lo siguiente para que se compile y actualice a cada cambio:
+    cmd> sass --watch estilos.scss styles.css    -    /*--watch para que revise si hay cambios en el fichero .scss, si los hay que complie de nuevo
+    /*comando --opcion origen.scss destino.css*/

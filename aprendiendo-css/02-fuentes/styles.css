@@ -1,0 +1,40 @@
+/* Fuentes personalizadas, se instalan en el documento para que el cliente las visualice bien sin tenerlas instaladas en su PC */
+@font-face{ /*Para instalarla usamos @font-face*/
+    font-family: TrapestryFontCustom; /*Indicamos el nombre para la fuente*/
+    src: url(fonts/Tapestry/Tapestry-Regular.ttf) /*Indicamos el archivo .ttf y su ruta*/
+}
+
+h1{
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    font-family: 'Mansalva', cursive; /*Ponemos varias fuentes por si alguna no funciona en el PC*/
+    font-style: italic; /*ponemos en cursiva el texto*/
+    text-transform: uppercase; /*transformamos el texto en mayusculas*/
+    font-size: 45px; /*ponemos 45px de tamaño al texto*/
+
+    /*Colores*/
+
+    /*Colores del sistema*/
+    color: MediumPurple;
+
+    /*Colores hexadecimales*/
+    color: #3a1f83;
+
+    /*Colores RGB*/
+    color: rgb(113, 225, 203);
+
+    /*Colores RGBA (la A es para que tenga o no transparencia)*/
+    color: rgba(229, 64, 203, 0.5);
+}
+
+h3{
+    font-family: TrapestryFontCustom, "Comic Sans MS";
+    font-size: 35px;
+    font-weight: lighter; /* para que sea menos gorda/negrita la letra*/
+    color: olive;
+}
+
+p{
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}

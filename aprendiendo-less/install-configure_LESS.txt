@@ -1,0 +1,17 @@
+Para Instalar LESS:
+- instalamos node.js (siguiente-siguiente...)
+- Comprobamos la version de node:
+    cmd> node -v    -    /*Nos dice la version que tenemos instalado*/
+    cmd> npm -v    -    /*Nos dice la version del gestor de paquetes de node.js*/
+- instalamos LESS con el gestor de paquetes de nodejs:
+    cmd> npm install -g less   -    /*-g para instalarlo DE FORMA GLOBAL, no solo en la carpeta en la que estemos*/
+- Comprobamos la version de LESS:
+    cmd> lessc -v
+
+Compilar LESS:
+- Vamos al directorio de nuestra web:
+    cmd> cd    -    /*Ponemos la ruta que sea*/
+- Ejecutamos en el cmd lo siguiente para que se compile y actualice a cada cambio:
+    cmd> less estilos.less styles.css    -    /*comando --opcion origen.less destino.css*/
+    /*NO podemos usar --watch, por lo que hay que compilar de nuevo con comandos cada vez que queramos actualizar el styles.css*/
+    

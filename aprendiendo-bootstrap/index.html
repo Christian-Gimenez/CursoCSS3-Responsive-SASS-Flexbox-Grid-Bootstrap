@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=width-device, user-scalable=no" />
+    <title>Aprendiendo Bootstrap con Víctor Robles</title>
+    <!--Importamos la hoja de estilos de bootstrap-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <!--              width: 75% margin:0px auto padding: maximo border color "danger"
+        <div class="mi-web w-75 m-auto p-5 border border-danger">
+            <h1>Aprendiendo Bottstrap con Víctor Robles WEB</h1>
+            <h2>Bienvenido a las clases de este framework para CSS</h2>
+            <button class="btn btn-success">Hola soy un boton</button>
+        </div>
+        -->
+
+    <div class="container border">
+        <!--Podemos usar container-fluid para que sea responsive y ocupe el 100%-->
+        <div class="row">
+            <header id="header" class="col-12 bg-primary text-white p-2 ps-5">
+                <h1>Aprendiendo Bottstrap con Víctor Robles WEB</h1>
+            </header>
+
+            <nav id="menu" class="col-12 bg-secondary text-white
+                                  d-none d-sm-none d-md-block">
+                <ul class="row w-50">
+                    <li class="col-xs-12 col-sm-12 col-md">Inicio</li>
+                    <li class="col-xs-12 col-sm-12 col-md">Pagina 1</li>
+                    <li class="col-xs-12 col-sm-12 col-md">Pagina 2</li>
+                    <li class="col-xs-12 col-sm-12 col-md">Pagina 3</li>
+                    <li class="col-xs-12 col-sm-12 col-md">Contacto</li>
+                </ul>
+            </nav>
+
+            <main id="content" class="col-12">
+                <div class="row">
+                    <section id="products" class="col-12 col-sm-12 col-md-9 border">
+                        <h2>Productos</h2>
+                        <hr />
+
+                        <!-- Primer ejemplo, indicando el tamaño de cada col
+                            <div class="items row">
+                            <div class="item col-3 border bg-primary m-3">
+                                producto
+                            </div>
+                            <div class="item col-3 border bg-warning m-3">
+                                producto
+                            </div>
+                            <div class="item col-3 border bg-danger m-3">
+                                producto
+                            </div>
+                            <div class="item col-3 border bg-primary m-3">
+                                producto
+                            </div>
+                            <div class="item col-3 border bg-warning m-3">
+                                producto
+                            </div>
+                            <div class="item col-3 border bg-danger m-3">
+                                producto
+                            </div>
+                            <div class="item col-3 border bg-primary m-3">
+                                producto
+                            </div>
+                            <div class="item col-3 border bg-warning m-3">
+                                producto
+                            </div>
+                            <div class="item col-3 border bg-danger m-3">
+                                producto
+                            </div>
+                        </div> -->
+
+                        <!--Responsive con cols de bootstrap-->
+                        <div class="items">
+                            <div class="row">
+                                <div class="item col-lg col-md-12 col-sm-12 border bg-primary">
+                                    producto
+                                </div>
+                                <div class="item col-lg col-md-6 col-sm-12 border bg-warning">
+                                    producto
+                                </div>
+                                <div class="item col-lg col-md-6 col-sm-12 border bg-danger">
+                                    producto
+                                </div>
+                            </div>
+
+                            <!--Segundo ejemplo, automatizando el tamaño de las col
+                            separando con divs row segun necesitemos-->
+                            <div class="row">
+                                <div class="item col border bg-primary m-2">
+                                    producto
+                                </div>
+                                <div class="item col border bg-warning m-2">
+                                    producto
+                                </div>
+                                <div class="item col border bg-danger m-2">
+                                    producto
+                                </div>
+                            </div>
+
+                            <div class="row mt-1">
+                                <div class="item col border bg-primary m-2">
+                                    producto
+                                </div>
+                                <div class="item col border bg-warning m-2">
+                                    producto
+                                </div>
+                                <div class="item col border bg-danger m-2">
+                                    producto
+                                </div>
+                                <div class="item col border bg-success m-2">
+                                    producto
+                                </div>
+                            </div>
+
+                            <!--Tercer ejemplo, usamos .justify-content para ordenar horizontalmente-->
+                            <div class="row mt-1 justify-content-between">
+                                <div class="item col-3 border bg-primary m-2">
+                                    producto
+                                </div>
+                                <div class="item col-3 border bg-warning m-2">
+                                    producto
+                                </div>
+                                <div class="item col-3 border bg-danger m-2">
+                                    producto
+                                </div>
+                            </div>
+
+                            <!--Cuarto ejemplo offset, para meter columnas vacias a la izq de un elemento-->
+                            <div class="row mt-1">
+                                <div class="item col-2 border bg-primary offset-1">
+                                    producto
+                                </div>
+                                <div class="item col-2 border bg-warning offset-1">
+                                    producto
+                                </div>
+                                <div class="item col-2 border bg-danger offset-1">
+                                    producto
+                                </div>
+                                <div class="item col-2 border bg-success offset-1">
+                                    producto
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar" class="col-3 border d-none d-sm-none d-md-block">
+                        <h2>Barra lateral</h2>
+
+                        <div class="lateral row bg-light align-items-center">
+                            <div class="col-4 bg-primary align-self-end order-3">
+                                Elemento 1
+                            </div>
+
+                            <div class="col-4 bg-success align-self-center order-2">
+                                Elemento 2
+                            </div>
+
+                            <div class="col-4 bg-warning align-self-start order-1">
+                                Elemento 3
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </main>
+
+            <footer class="col-lg-12 bg-info">
+                Master en CSS con Víctor Robles WEB &copy;
+            </footer>
+        </div>
+    </div>
+
+    <!--Importamos la libreria JQuery-->
+    <script type="text/javascript" src="jquery/jquery-3.6.0.min.js"></script>
+    <!--Importamos el Javascript de Bootstrap-->
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

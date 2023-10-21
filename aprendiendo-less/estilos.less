@@ -1,0 +1,65 @@
+// Variables
+@bgcolor: lightblue; //Utilizamos @miVariable y asignamos valor : valor;
+@b: body;
+@fuente: Arial;
+
+@{b}{ //sustituimos esa regla por el valor "body", llamando a la variable con @{miVariable}
+    background: @bgcolor;
+} 
+
+h1 {
+    font-family: @fuente;
+}
+
+// Anidación
+.informacion {
+    ul{
+        a{
+            color: green;
+            font-size: 18px;
+        }
+    }
+}
+
+// Mixins / Funciones
+.sombras(@size){ // establecemos con "." + variable + (@parametros) = .miVariable(@parmtr1, parmtr2){ valores css; }
+    box-shadow: 0px 0px @size black; //luego se sustituira el parametro @size por el valor que ingresemos
+    text-shadow: 0px 0px @size black;
+}
+
+.informacion{
+    .sombras(5px); //llamamos a la funcion y le pasamos un valor a su parametro (@size)
+}
+
+// Operadores
+h1 {
+    font-size: 30px + 7px;
+}
+
+// Mixins/Funciones condicionales
+//.funcion(@valor) cuando sea (@valor=verdadero) { haz esto }
+.textoNegro(@value) when (@value=true) {
+    color: black;
+}
+
+h1 {
+    color: blue; //establecemos el valor "blue"
+    .textoNegro(false); //al pasar el valor (false) no se cumplira el condicional
+}
+
+// Bucles
+//.funcion(@valor) cuando sea (@valor > 0) asi no se hace bucle infinito
+.loop(@cont) when (@cont > 0) {
+    .loop((@cont - 1)); //vamos quitandole -1 al @valor
+    height: (900px / @cont); //aplicamos la altura 900px / @valor hasta que termine el bucle, hasta que digamos @cont sea mayor a 0
+}
+
+.informacion{
+    height: 900px;
+    .loop(5); //Al darle el valor 5, entrap pero solo 1 vez al bucle, dividiendo 900 / 5 = 180px
+}
+
+/*output css:
+.informacion {
+  height: 180px;
+} */

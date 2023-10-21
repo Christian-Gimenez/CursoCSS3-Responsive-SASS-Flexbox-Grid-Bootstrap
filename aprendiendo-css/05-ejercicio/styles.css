@@ -1,0 +1,178 @@
+/*
+Ejercicio completo con HTML y CSS
+(HECHO) 1. Crear un documento HTML y vincularlo con un CSS
+(HECHO) 2. Crear una estructura HTML que cuente con un CONTENEDOR GENERAL,
+        CABECERA, MENU, BARRA LATERAL, SECCION DE CONTENIDO PRINCIPAL,
+        ELEMENTOS DENTRO DEL CONTENEDOR PRINCIPAL Y FOOTER.
+(HECHO) 3. Todo el contenido debe estar dentro del contenedor general
+        y su ancho será de 1200px y estar centrado.
+(HECHO) 4. Header debe ocupar el 100% del ancho y tener un texto grande centrado.
+(HECHO) 5. El menu debe tener los elementos uno al lado del otro.
+(HECHO) 6. El contenido principal debe tener un ancho del 70%.
+(HECHO) 7. El contenido dentro del contenedor principal debe ser
+        una cuadricula con 4 lineas de 2 cajas.
+(HECHO) 8. La barra lateral debe tener un ancho del 30%.
+(HECHO) 9. El footer debe tener un ancho del 100% del div que lo contiene
+   y estar abajo del todo
+*/
+
+*{
+    margin: 0px; /*quitamos margenes exteriores*/
+    padding: 0px; /*quitamos margenes interiores*/
+    text-decoration: none; /*quitamos todos los subrayados por defecto, etc*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#general{
+    width: 1200px; /*agregamos 1200px de ancho al div #general*/
+    margin: 0px auto; /*automatizamos los márgenes exteriores para centrarlo*/
+    margin-top: 20px; /*añadimos más margen superior*/
+    border: 1px solid #ccc;
+}
+
+#header{
+    width: 100%; /*para que ocupe el 100% del ancho de su div*/
+    height: 100px; /*le damos 100px al alto del div #header*/
+    background-color: rgb(34, 150, 208);
+    color: white;
+    font-size: 25px;
+    text-align: center; /*centramos el texto horizontalmente*/
+    line-height: 95px; /*centramos a ojo el texto verticalmente*/
+}
+
+.clearfix{
+    float: none; /*elimina los flotados*/
+    clear: both; /*indica que los siguientes elementos no pueden flotar a ningun lado de este div*/
+}
+
+#menu{
+    background-color: #eeeeee;
+}
+
+#menu ul li{
+    /* display: inline-block; poner los elementos en linea uno al lado del otro*/
+    display: block; /*hacemos que se comporten todos los elementos como bloques*/
+    float: left; /*hacemos que los elementos floten a la izquierda unos de los otros*/
+    border-right: 1px solid #ccc; /*añadimos separador a la derecha*/
+}
+
+#menu ul li a{
+    color: #444;
+    display: block; /*para que los enlaces ocupen la cajita*/
+    padding: 15px; /*añadimos margenes exteriores de 10px y lo hacemos en
+    el a ya que asi cuando hagamos clic en cualquier lado de la cajita,
+    se seleccionara bien el enlace*/
+}
+
+/*Pseudo-Clase HOVER para que cambie de color al pasar el ratón encima*/
+#menu ul li:hover{ /*para cambiar la cajita de color al pasar el raton*/
+    background: #1f5bb5;
+    cursor: pointer; /*para poner una manita en el cursor al pasar por encima*/
+}
+
+#menu ul li:hover a{ /*para cambiar la letra de color al pasar el ratón*/
+    color: white;
+}
+
+#contenido{
+    width: 69.6%; /*le ponemos 69% en vez de 70% ya que si no no encajan los dos floats y no puede ponerse la barra lateral donde debe*/
+    /* border: 1px solid green; le quitamos el borde para el ejercicio 9 */
+    float: left; /*para flotar a la izquierda un elemento al lado del otro*/
+}
+
+#lateral{
+    width: 30%; /*añadimos un 30% de anchura al sidebar*/
+    border: 1px solid red;
+    float: left; /*para flotar a la izquierda un elemento al lado del otro*/
+    min-height: 500px; /*Le damos una altura mínima de 500px */
+    max-height: 650px; /*le damos una altura máxima de 650px*/
+    text-align: center; /*alineamos al centor el texto de la caja*/
+    /* overflow: hidden; todo lo que se salga de la caja desaparecerá*/
+    /* overflow: scroll; que se cree una barra de desplazamiento para poder visualizar todo haciendo scroll*/
+    overflow-y: scroll; /*se crea una barra scroll pero SOLO en el eje Y vertical*/
+}
+
+#contenido > h1{
+    text-align: center; /*alineamos el texto en el centro*/
+    border-bottom: 1px solid #ccc; /*añadimos un borde abajo*/
+    padding: 15px; /*añadimos margen interior para hacrlo mas grande*/
+    color: #444;
+    text-shadow: 1px 1px 2px gray; /*la sombra que quiero mostrar en el eje X horizontal, luego en el eje Y vertical, luego el difuminado y por último el color*/
+}
+
+#contenido .caja{
+    width: 40%;
+    height: 250px;
+    background-color: #ccc;
+    border: 1px solid gray;
+    color: white;
+    display: block; /*hacemos que se comporten todos los elementos como bloques*/
+    float: left;
+    margin: 20px; /*añadimos margen exterior para centrar las cajas*/
+    margin-left: 43px; /*añadimos más margen a la izq para centrar mejor las cajas*/
+    text-align: center; /*centrar el texto de la caja horizontalmente*/
+    line-height: 250px; /*centrar el texto de la caja verticalmente*/
+    color: #444;
+    text-transform: uppercase; /*Hacer el texto todo MAYUS*/
+    box-shadow: 5px 5px 10px black; /*sobra de caja, eje x horizontal, eje y vertical, cantidad de difuminado, y color*/
+    border-radius: 50px 10px 4px 61px; /*hacemos que el borde de la caja sea redondeado, podemos ir redondeando por separado cada esquina*/
+    /* border-radius: 999px; para redondear tanto la caja que se transforme en un circulo*/
+}
+
+.sombra-interior{ /*esta clase se la añado a la caja 2 despues de la clase "caja" separado por un espacio*/
+    box-shadow: 0px 0px 15px black inset !important; /*usamos inset para que la sombra de la caja sea interior*/
+}
+
+footer{
+    width: 100%; /*le damos un 100% de anchura*/
+    height: 55px; /*le ponemos 55px altura para agrandarlo, se puede hacer con un padding pero en este caso queda mejor así*/
+    line-height: 55px; /*para que se centre verticalmente en la caja*/
+    background-color: rgb(205, 205, 205);
+    text-align: center; 
+    color: rgb(45, 45, 45);
+    border-top: 1px solid rgb(143, 143, 143);
+}
+
+.libre{
+    position: absolute; /*Sirve para poner la caja en una posición absoluta independientemente del resto de elementos */
+    top: 300px; /*coloca la caja 300px hacia arriba de la pagina*/
+    left: 50%; /*coloca la caja al 50% desde la izquierda de la pagina*/
+
+
+    border: 1px solid black;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 17px;
+    display: block;
+}
+
+.libre1{
+    z-index: 2; /*cuanto mayor sea el nº z-index, más encima estará el elemento*/
+}
+
+.libre2{
+    background-color: green;
+    top: 280px;
+    left: 52%;
+    z-index: 1; /*para indicar si la caja esta al frente o al fondo, etc.*/
+}
+
+.fija{
+    position: fixed; /*Sirve para poner la caja en una posición FIJA y que al hacer scroll se mantenga en su sitio*/
+    top: 50%;
+    left: 0px;
+
+
+    border: 1px solid black;
+    background-color: blue;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 13px;
+}
+

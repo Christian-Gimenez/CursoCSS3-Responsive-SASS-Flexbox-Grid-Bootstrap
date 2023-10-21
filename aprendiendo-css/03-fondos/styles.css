@@ -1,0 +1,39 @@
+body{
+    background-color: #ccc; /*añadimos color al fondo de todo el body*/
+    /*
+    background-image: url("images/wallpaper.jpg"); Para poner una imagen de fondo
+    background-repeat: no-repeat; Para indicar si se repite o no la imagen de fondo
+    background-size: 100% 100%; Para darle ancho y alto a la imagen de fondo
+    background-attachment: fixed; Para fijar la imagen del fondo y al hacer scroll no se mueva pero el resto del documento si
+    background-position: right bottom;  Para poner la imagen de fondo abajo a la derecha
+    */
+    color: black; /*ponemos color negro al texto de todo el body*/
+    text-align: justify; /*para alinear el texto de manera "justificada", que es como centrada pero aprovechando todo el hueco*/
+    text-indent: 15px; /*ponemos 15px de identacion/tabulacion al principio del texto*/
+
+    /*
+    word-spacing: 10px; Espaciamos las palabras entre ellas
+    letter-spacing: 5px; Espaciamos las letras entre ellas
+    */
+}
+
+#caja{
+    border: 5px solid black;
+    padding: 10px; /*Agrandamos la caja añadiendole 10px de margen interno*/
+    background-color: rgb(61, 109, 203);
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    /*line-height: 50px;*/
+    text-transform: uppercase; /*transformamos en MAYUS el texto*/
+    text-decoration: line-through; /*añadimos decoracion al texto, en este caso una linea en medio*/
+    vertical-align: top; /*alineamos arriba verticalmente los elementos de la caja*/
+}
+
+h2{
+    color: white;
+    background: green;
+    background-image: url("images/patron2.gif"); /*añadimos una imagen de fondo al h2*/
+    border: 5px solid rgb(15, 96, 15);
+}
+
